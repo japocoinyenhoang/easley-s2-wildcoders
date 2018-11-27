@@ -1,6 +1,8 @@
-@import 'core/_settings.scss';
-@import '_card_header.scss';
-@import '_card_main.scss';
-@import 'core/settings';
-@import 'core/home';
-@import 'core/footer';
+@import 'core/variables';
+@import 'core/commons';
+
+@import 'components/card_main';
+@import 'components/home';
+
+@import 'layout/card_header';
+@import 'layout/footer';
