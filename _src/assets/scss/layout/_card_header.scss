@@ -1,5 +1,20 @@
 .card__header {
-    background-color: red;
     height: 111px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 79px; 
+}
+.editor__logo{
+    background: url('../images/logo-card.svg') center center no-repeat;
+    height: 51px;
+    width: 201px;
+    background-size: cover;
+}
+.tittle__hiden{
+    visibility:hidden;
+    width: 0px;
+    height: 0px;
+    margin: 0px;
 }
