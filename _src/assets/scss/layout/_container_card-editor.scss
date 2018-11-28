@@ -1,0 +1,35 @@
+.container__card-editor{
+    background-image: linear-gradient(to bottom, $silver, $pale-grey);
+    padding-right: 35px;
+    padding-left: 45px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    height: 457px;
+}
+.btn__reset {
+    height: 30px;
+    width: 75px;
+    background-color: transparent;
+    border-radius: 15px;
+    padding: unset;
+    border-color: $white;
+    margin-bottom: 20px;
+}
+
+.card__details{
+    background-color: $white;
+    height: 367px;
+    padding-top: 20px;
+
+}
+.card__data{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.card__data-name{
+    margin-bottom: 5px;
+}
+.card__img{
+    width: 240px;
+    height: 200px;
+}
