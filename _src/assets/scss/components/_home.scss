@@ -2,6 +2,10 @@
     text-align: center;
     background-color: #f5f5f5;
     flex-grow: 1;
+
+    @media all and(min-width:768px){
+        position: relative;
+    }
 }
 
 .home__logo{
@@ -28,7 +32,7 @@
 }
 
 .home__main--title{
-    color: $dull-orange;
+    color: $color-primary;
     font-size: 19px;
     font-family: $font-title;
     margin: 0;
@@ -91,18 +95,22 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
+
+    a:link{
+        text-decoration: none;
+    }
+    
     
     @media all and(min-width:768px){
-        margin-bottom: 59px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 59px;
     }  
 }
 
-a{
-    text-decoration: none;
-}
-
 .home__options--icon {
-    color: $dull-orange;
+    color: $color-primary;
     font-size: 28px;
 }
 
