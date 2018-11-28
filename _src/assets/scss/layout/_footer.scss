@@ -1,12 +1,28 @@
-// ESTO ES EL FOOTER
+// FOOTER
 .footer{
-    // background-color: aquamarine
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    @media all and(min-width:768px){
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 40px;
+    }
 }
 
 .footer__copyright{
-    // background-color: pink;
+    font-family: $font-text;
+    font-size: 14px;
+    color: $brownish-grey;
+    margin-bottom: 10px;
 }
 
 .footer__logo{
-    // background-color: red;
+    background: url('../images/logo-adalab.png') center center no-repeat;
+    background-size: cover;
+    width: 103px;
+    height: 40px;
 }
