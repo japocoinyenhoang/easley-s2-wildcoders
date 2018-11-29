@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-body {
+body{
     margin: 0;
 }
 
@@ -10,3 +10,8 @@ body {
     margin: 0 26px;
 }
 
+.page{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
