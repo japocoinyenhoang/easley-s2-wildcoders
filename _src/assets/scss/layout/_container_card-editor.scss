@@ -20,6 +20,7 @@
     background-color: $white;
     height: 367px;
     padding-top: 20px;
+    
 
 }
 .card__data{
@@ -32,4 +33,17 @@
 .card__img{
     width: 240px;
     height: 200px;
+}
+.card__contact{
+    display: flex;
+}
+.card__skills{
+    display: flex;
+}
+.contact-icons{
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    border-color: $hospital-green;
+    border: 2px;
 }
