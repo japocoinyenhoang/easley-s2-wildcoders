@@ -5,6 +5,11 @@
     padding-top: 10px;
     padding-bottom: 30px;
     height: 457px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
 }
 .btn__reset {
     height: 30px;
@@ -14,6 +19,9 @@
     padding: unset;
     border-color: $white;
     margin-bottom: 20px;
+    align-self: flex-start;
+    
+
 }
 
 .card__details{
@@ -21,11 +29,8 @@
     height: 367px;
     padding-top: 20px;
     width: 240px;
+    // margin: auto;
     
-
-}
-.btn__reset{
-    display: flex;
 }
 .ico__reset-img{
     color: $gunmetal;
