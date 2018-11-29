@@ -20,6 +20,7 @@
     background-color: $white;
     height: 367px;
     padding-top: 20px;
+    width: 240px;
     
 
 }
@@ -44,18 +45,27 @@
 .card__img{
     width: 240px;
     height: 200px;
-    background: url('../images/paquita.jpg') center center no-repeat;
+    background: url('../images/paquita.jpg') top center no-repeat;
+    background-size: cover;
 }
 .card__contact{
     display: flex;
+    list-style: none;
+    padding-left: 20px;
 }
 .card__skills{
     display: flex;
+    list-style: none;
 }
+
 .contact-icons{
     width: 32px;
     height: 32px;
     border-radius: 16px;
     border: solid 2px $hospital-green;
-    color: red;
+    color: $dark-green-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
 }
