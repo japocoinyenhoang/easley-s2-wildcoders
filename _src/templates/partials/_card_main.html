@@ -1,32 +1,10 @@
 <main class="page__main">
-    <div class="container__card-editor">
-        <div class="btn__bar">
-            <button class="btn__reset">
-                <div class="ico__reset-img">:)</div>
-                <div class="ico__reset-text">RESET</div>
-            </button>
-        </div>
-        <div class="card__details">
-                <div class="card__data">
-                    <div class="card__data-name">Nombre y Apellido</div>
-                    <div class="card__data-job">Front end Developer</div>
-                </div>
-                <div class="card__img"></div>
-                <div class="list__card-contact">
-                    <ul class="card__contact">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
-                <div class="list__card-skills">
-                    <ul class="card__skills">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
-        </div>
+        <partial src="_container_card-editor.html"></partial>
+
+        <ul class="list__bar-menu">
+                <partial src="_design_card.html"></partial>
+                <partial src="_fill_card.html"></partial>
+                <partial src="_share_card-editor.html"></partial>
+        </ul>
     </div>
 </main>
