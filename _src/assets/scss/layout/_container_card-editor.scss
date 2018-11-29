@@ -46,6 +46,24 @@
 }
 .card__data-name{
     margin-bottom: 5px;
+    font-family: ComicSansMS;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.11;
+    letter-spacing: normal;
+    color: $dark-green-blue;
+}
+.card__data-job {
+    font-family: ComicSansMS;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    color: $gunmetal;
 }
 .card__img{
     width: 240px;
@@ -82,7 +100,6 @@
     border-radius: 4px;
     font-family: $font-text;   
 }
-
 
 .contact-icons{
     width: 32px;
