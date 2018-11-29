@@ -11,10 +11,18 @@ fieldset {
     text-transform: uppercase;
 }
 
+.palet__color-squares {
+    display: inline-flex;
+    align-items: center;
+}
+
+// Pienso que se podrían unificar las clases de los recuadros de la paleta, puesto que he puesto cada background desde el HTML y solo necesitamos que nos de los tamaños, REVISAR //
+
 .color-1{
     width: 30px;
     height: 30px;
     margin-bottom: 20px;
+
 }
 .color-2{
     width: 30px;
