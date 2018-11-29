@@ -23,6 +23,17 @@
     
 
 }
+.btn__reset{
+    display: flex;
+}
+.far{
+    color: $gunmetal;
+    padding-left: 10px;
+    margin-right: 10px; 
+}
+.ico__reset-text{
+    color: $gunmetal;
+}
 .card__data{
     margin-left: 20px;
     margin-bottom: 10px;
@@ -33,6 +44,7 @@
 .card__img{
     width: 240px;
     height: 200px;
+    background: url('../images/paquita.jpg') center center no-repeat;
 }
 .card__contact{
     display: flex;
@@ -44,6 +56,5 @@
     width: 32px;
     height: 32px;
     border-radius: 16px;
-    border-color: $hospital-green;
-    border: 2px;
+    border: solid 2px $hospital-green;
 }
