@@ -14,16 +14,25 @@
 
 .btn__bar {
     width: 240px;
+    
 }
 .btn__reset {
-    height: 30px;
-    width: 75px;
+    // al alto y el ancho se lo da su contenido
+    // height: 30px;
+    // width: 75px;
     background-color: transparent;
     border-radius: 15px;
-    padding: unset;
+    border: 1px solid;
+    // que es esto de unset?
+    // padding: unset;
     border-color: $white;
     margin-bottom: 20px;
     align-self: flex-start;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 20px;
+    color: $gunmetal;
+
     
 
 }
@@ -37,12 +46,14 @@
     
 }
 .ico__reset-img{
-    color: $gunmetal;
-    padding-left: 10px;
-    margin-right: 10px; 
+    display: inline-block;
+    padding-right: 10px;
+    
 }
 .ico__reset-text{
-    color: $gunmetal;
+    display: inline-block;
+    font-family: $font-text;
+
 }
 .card__data{
     padding-left: 20px;

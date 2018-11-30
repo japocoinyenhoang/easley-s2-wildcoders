@@ -1,10 +1,11 @@
 .card__header {
     height: 111px;
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
     padding-left: 40px;
-    padding-right: 79px; 
+    // creo que esto no hace falta ponerlo ya que esta la medida del logo puesta.
+    // padding-right: 79px; 
 }
 .editor__logo{
     background: url('../images/logo-card.svg') center center no-repeat;
