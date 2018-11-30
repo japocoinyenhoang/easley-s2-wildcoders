@@ -1,0 +1,35 @@
+fieldset {
+    border: 0;
+    padding: 0;
+}
+.form__fieldset{
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.wrapper__bar-menu{
+    display: flex;
+    align-items: center;
+    padding: 10px 0 7px;
+    position: relative;
+ }
+
+.card-main__icon{
+    color: $color-primary;
+    font-size: 18px;
+}
+
+.tex__ico-bar{
+    color: #54585a;
+    font-family: $font-text;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-left:10px;
+}
+
+.ico__arrow-menu{
+    color: #54585a;
+    font-size: 18px;
+    position: absolute;
+    right: 0;
+}
