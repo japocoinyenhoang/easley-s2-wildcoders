@@ -3,6 +3,8 @@
         display: grid;
         grid-template-columns: 1fr 1frs;
         grid-template-areas: "a b";
+        background-image: linear-gradient(to bottom, $white-three,$white);
+        border-bottom: 1px solid $white-two;
     }
 
 }
