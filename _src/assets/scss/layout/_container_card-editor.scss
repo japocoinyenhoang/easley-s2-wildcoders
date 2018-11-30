@@ -1,3 +1,11 @@
+.page__main{
+    @media all and (min-width:768px){
+        display: grid;
+        grid-template-columns: 1fr 1frs;
+        grid-template-areas: "a b";
+    }
+
+}
 .container__card-editor{
     background-image: linear-gradient(to bottom, $silver, $pale-grey);
     // padding-right: 35px;
@@ -9,6 +17,19 @@
     flex-direction: column;
     align-items: center;
     // align-content: flex-start;
+
+    @media all and (min-width:768px){
+        grid-area: b;
+        height: 812px;
+        width: 329px;
+        border-radius: 6px;
+        margin: 23px 40px 21px auto;
+        justify-content: center;
+        }
+
+    @media all and (min-width:1024px){
+        width: 585px;
+    }
 
 }
 
