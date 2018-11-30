@@ -1,153 +1,148 @@
-.page__main{
-    @media all and (min-width:768px){
-        display: grid;
-        grid-template-columns: 1fr 1frs;
-        grid-template-areas: "a b";
-        background-image: linear-gradient(to bottom, $white-three,$white);
-        border-bottom: 1px solid $white-two;
-    }
-
+.page__main {
+  @media all and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1frs;
+    grid-template-areas: "a b";
+    background-image: linear-gradient(to bottom, $white-three, $white);
+    border-bottom: 1px solid $white-two;
+  }
 }
-.container__card-editor{
-    background-image: linear-gradient(to bottom, $silver, $pale-grey);
-    // padding-right: 35px;
-    // padding-left: 45px;
-    // padding-top: 10px;
-    // padding-bottom: 30px;
-    height: 457px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    // align-content: flex-start;
 
-    @media all and (min-width:768px){
-        grid-area: b;
-        height: 812px;
-        width: 329px;
-        border-radius: 6px;
-        margin: 23px 40px 21px auto;
-        justify-content: center;
-        }
+.container__card-editor {
+  background-image: linear-gradient(to bottom, $silver, $pale-grey);
+  height: 457px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    @media all and (min-width:1024px){
-        width: 585px;
-    }
+  @media all and (min-width: 768px) {
+    grid-area: b;
+    height: 812px;
+    width: 329px;
+    border-radius: 6px;
+    margin: 23px 40px 21px auto;
+    justify-content: center;
+  }
 
+  @media all and (min-width:1024px) {
+    width: 585px;
+  }
 }
+
 
 .btn__bar {
-    width: 240px;
-    
+  width: 240px;
 }
+
 .btn__reset {
-    // al alto y el ancho se lo da su contenido
-    // height: 30px;
-    // width: 75px;
-    background-color: transparent;
-    border-radius: 15px;
-    border: 1px solid;
-    // que es esto de unset?
-    // padding: unset;
-    border-color: $white;
-    margin: 10px auto 20px;
-    align-self: flex-start;
-    padding: 5px 10px;
-    font-size: 12px;
-    line-height: 20px;
-    color: $gunmetal;
-
-    
-
+  background-color: transparent;
+  border-radius: 15px;
+  border: 1px solid;
+  border-color: $white;
+  margin: 10px auto 20px;
+  align-self: flex-start;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 20px;
+  color: $gunmetal;
 }
 
-.card__details{
-    background-color: $white;
-    height: 367px;
-    width: 240px;
-    
-}
-.ico__reset-img{
-    display: inline-block;
-    padding-right: 10px;
-    
-}
-.ico__reset-text{
-    display: inline-block;
-    font-family: $font-text;
 
+.card__details {
+  background-color: $white;
+  height: 367px;
+  width: 240px;
 }
-.card__data{
-    padding-left: 15px;
-    margin: 20px auto 10px;
-    border-left:solid 5px $hospital-green;
+
+
+.ico__reset-img {
+  display: inline-block;
+  padding-right: 10px;
 }
-.card__data-name{
-    margin-bottom: 5px;
-    font-family: $typo2;
-    font-size: 18px;
-    font-weight: bold;
-    // font-style: normal;
-    font-stretch: normal;
-    line-height: 20px;
-    // letter-spacing: normal;
-    color: $dark-green-blue;
-    text-transform: capitalize;
+
+
+.ico__reset-text {
+  display: inline-block;
+  font-family: $font-text;
 }
+
+
+.card__data {
+  padding-left: 15px;
+  margin: 20px auto 10px;
+  border-left: solid 5px $hospital-green;
+}
+
+
+.card__data-name {
+  margin-bottom: 5px;
+  font-family: $typo2;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  line-height: 20px;
+  color: $dark-green-blue;
+  text-transform: capitalize;
+}
+
+
 .card__data-job {
-    font-family: $typo2;
-    font-size: 16px;
-    // font-weight: normal;
-    // font-style: normal;
-    // font-stretch: normal;
-    line-height: 20px;
-    // letter-spacing: normal;
-    color: $gunmetal;
-}
-.card__img{
-    width: 240px;
-    height: 200px;
-    background: url('../images/paquita.jpg') top center no-repeat;
-    background-size: cover;
-}
-.card__contact{
-    display: flex;
-    list-style: none;
-    box-sizing: content-box;
-    margin: 0;
-    padding: 10px 20px;
-    border-bottom: 2px solid $dirty-blue20;
+  font-family: $typo2;
+  font-size: 16px;
+  line-height: 20px;
+  color: $gunmetal;
 }
 
-.card__skills{
-    display: flex;
-    list-style: none;
-    // box-sizing: content-box;
-    padding: 10px 15px;
-    margin: 0; 
-} 
 
-.card__skills-item{
-    display: inline-flex; 
-    list-style: none;
-    font-family: $font-text;   
-    font-size: 13px;
-    color: $white;
-    text-transform: uppercase;
-    padding: 0 5px;
-    margin-right: 5px;
-    background-color: $dirty-blue;
-    border-radius: 4px;
+.card__img {
+  width: 240px;
+  height: 200px;
+  background: url('../images/paquita.jpg') top center no-repeat;
+  background-size: cover;
 }
 
-.contact-icons{
-    width: 32px;
-    height: 32px;
-    border-radius: 16px;
-    border: solid 2px $hospital-green;
-    color: $dark-green-blue;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px;
+
+.card__contact {
+  display: flex;
+  list-style: none;
+  box-sizing: content-box;
+  margin: 0;
+  padding: 10px 20px;
+  border-bottom: 2px solid $dirty-blue20;
+}
+
+
+.card__skills {
+  display: flex;
+  list-style: none;
+  padding: 10px 15px;
+  margin: 0;
+}
+
+
+.card__skills-item {
+  display: inline-flex;
+  list-style: none;
+  font-family: $font-text;
+  font-size: 13px;
+  color: $white;
+  text-transform: uppercase;
+  padding: 0 5px;
+  margin-right: 5px;
+  background-color: $dirty-blue;
+  border-radius: 4px;
+}
+
+
+.contact-icons {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  border: solid 2px $hospital-green;
+  color: $dark-green-blue;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
 }
