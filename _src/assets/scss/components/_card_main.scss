@@ -2,12 +2,13 @@ fieldset {
     border: 0;
     padding: 0;
 }
+.form__fieldset{
+    border-bottom: 1px solid #d8d8d8;
+}
 
 .wrapper__bar-menu{
     display: flex;
     align-items: center;
-    border-top: 1px solid #d8d8d8;
-    border-bottom: 1px solid #d8d8d8;
     padding: 10px 0 7px;
     position: relative;
  }
