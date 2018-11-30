@@ -1,14 +1,14 @@
 .container__card-editor{
     background-image: linear-gradient(to bottom, $silver, $pale-grey);
-    padding-right: 35px;
-    padding-left: 45px;
-    padding-top: 10px;
-    padding-bottom: 30px;
+    // padding-right: 35px;
+    // padding-left: 45px;
+    // padding-top: 10px;
+    // padding-bottom: 30px;
     height: 457px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-content: flex-start;
+    // align-content: flex-start;
 
 }
 
@@ -26,7 +26,7 @@
     // que es esto de unset?
     // padding: unset;
     border-color: $white;
-    margin-bottom: 20px;
+    margin: 10px auto 20px;
     align-self: flex-start;
     padding: 5px 10px;
     font-size: 12px;
@@ -40,9 +40,7 @@
 .card__details{
     background-color: $white;
     height: 367px;
-    padding-top: 20px;
     width: 240px;
-    margin: auto;
     
 }
 .ico__reset-img{
@@ -56,29 +54,30 @@
 
 }
 .card__data{
-    padding-left: 20px;
-    margin-bottom: 10px;
+    padding-left: 15px;
+    margin: 20px auto 10px;
     border-left:solid 5px $hospital-green;
 }
 .card__data-name{
     margin-bottom: 5px;
-    font-family: ComicSansMS;
+    font-family: $typo2;
     font-size: 18px;
     font-weight: bold;
-    font-style: normal;
+    // font-style: normal;
     font-stretch: normal;
-    line-height: 1.11;
-    letter-spacing: normal;
+    line-height: 20px;
+    // letter-spacing: normal;
     color: $dark-green-blue;
+    text-transform: capitalize;
 }
 .card__data-job {
-    font-family: ComicSansMS;
+    font-family: $typo2;
     font-size: 16px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.25;
-    letter-spacing: normal;
+    // font-weight: normal;
+    // font-style: normal;
+    // font-stretch: normal;
+    line-height: 20px;
+    // letter-spacing: normal;
     color: $gunmetal;
 }
 .card__img{
@@ -91,30 +90,30 @@
     display: flex;
     list-style: none;
     box-sizing: content-box;
-    padding-left: 20px;
-    padding-bottom: 10px;
-    margin-bottom: 0px;
+    margin: 0;
+    padding: 10px 20px;
     border-bottom: 2px solid $dirty-blue20;
 }
 
 .card__skills{
     display: flex;
     list-style: none;
-    padding-left: 15px;
-    margin: auto; 
+    // box-sizing: content-box;
+    padding: 10px 15px;
+    margin: 0; 
 } 
 
 .card__skills-item{
     display: inline-flex; 
     list-style: none;
+    font-family: $font-text;   
     font-size: 13px;
-    text-transform: uppercase;
-    padding: 0 4px;
-    margin: 5px;
     color: $white;
+    text-transform: uppercase;
+    padding: 0 5px;
+    margin-right: 5px;
     background-color: $dirty-blue;
     border-radius: 4px;
-    font-family: $font-text;   
 }
 
 .contact-icons{
@@ -123,6 +122,7 @@
     border-radius: 16px;
     border: solid 2px $hospital-green;
     color: $dark-green-blue;
+    font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
