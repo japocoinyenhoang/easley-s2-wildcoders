@@ -28,45 +28,69 @@ fieldset {
     display: flex;
 }
 
+.radio__typo{
+    padding-top: 33px;
+}
+
+.radio__color{
+    padding-top: 25px;
+}
 // Pienso que se podrían unificar las clases de los recuadros de la paleta, puesto que he puesto cada background desde el HTML y solo necesitamos que nos de los tamaños, REVISAR //
 
 .color-1{
     width: 30px;
     height: 30px;
-
+    margin-bottom: 20px;
 }
+
 .color-2{
     width: 30px;
     height: 30px;
+    margin-bottom: 20px;
 }
+
 .color-3{
     width: 30px;
     height: 30px;
+    margin-bottom: 20px;
 }
+
 .color-4{
     width: 30px;
     height: 30px;
+    margin-bottom: 20px;
 }
+
 .color-5{
     width: 30px;
     height: 30px;
+    margin-bottom: 20px;
 }
+
 .color-6{
     width: 30px;
     height: 30px;
+    margin-bottom: 20px;
 }
+
 .color-7{
     width: 30px;
     height: 30px;
+    margin-bottom: 20px;
 }
+
 .color-8{
     width: 30px;
     height: 30px;
+    margin-bottom: 20px;
 }
+
 .color-9{
     width: 30px;
     height: 30px;
+    margin-bottom: 20px;
 }
+
 .option__font-1 {
     display: flex;
 }
@@ -75,10 +99,12 @@ fieldset {
     font-family: $typo1;
     font-size: 16px;
 }
+
 .typo-2 {
     font-family: $typo2;
     font-size: 16px;
 }
+
 .typo-3 {
     font-family: $typo3;
     font-size: 16px;
