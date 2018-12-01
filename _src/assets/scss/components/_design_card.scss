@@ -37,58 +37,46 @@ fieldset {
 }
 // Pienso que se podrían unificar las clases de los recuadros de la paleta, puesto que he puesto cada background desde el HTML y solo necesitamos que nos de los tamaños, REVISAR //
 
-.color-1{
+.color{
     width: 30px;
     height: 30px;
     margin-bottom: 20px;
+}
+
+.color-1{
+    background-color:#114e4e;
 }
 
 .color-2{
-    width: 30px;
-    height: 30px;
-    margin-bottom: 20px;
+    background-color:#438792;
 }
 
 .color-3{
-    width: 30px;
-    height: 30px;
-    margin-bottom: 20px;
+    background-color: #a2deaf;
 }
 
 .color-4{
-    width: 30px;
-    height: 30px;
-    margin-bottom: 20px;
+    background-color: #420101;
 }
 
 .color-5{
-    width: 30px;
-    height: 30px;
-    margin-bottom: 20px;
+    background-color: #bd1010;
 }
 
 .color-6{
-    width: 30px;
-    height: 30px;
-    margin-bottom: 20px;
+    background-color: #e95626;
 }
 
 .color-7{
-    width: 30px;
-    height: 30px;
-    margin-bottom: 20px;
+    background-color: #3e5b65;
 }
 
 .color-8{
-    width: 30px;
-    height: 30px;
-    margin-bottom: 20px;
+    background-color: #dfe5eb;
 }
 
 .color-9{
-    width: 30px;
-    height: 30px;
-    margin-bottom: 20px;
+    background-color: #a0c0cf;
 }
 
 .option__font-1 {
