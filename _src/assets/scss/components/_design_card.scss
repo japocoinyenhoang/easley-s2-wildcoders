@@ -24,10 +24,12 @@ fieldset {
     align-items: center;
     display: flex;
 }
-.input__label {
+.input__label-color {
     display: flex;
 }
-
+.input__label-typo {
+    display: flex;
+}
 .radio__typo{
     padding-top: 33px;
 }
