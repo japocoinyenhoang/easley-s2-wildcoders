@@ -1,11 +1,21 @@
 'use strict';
 
+//Sustituir nombre y profesión
 const job = document.querySelector('#job');
-const eventExample = document.querySelector('.event__example');
+const name = document.querySelector('#fullName');
+const cardJob = document.querySelector('.card__data-job');
+const cardName = document.querySelector('.card__data-name');
 
-const fillField = (event) => {
-   const guilty = event.target;
-   eventExample.innerHTML = guilty.value;
+function fillName(event){
+  const nameField = event.currentTarget;
+  cardName.innerHTML = nameField.value;
 }
 
-job.addEventListener('keyup', fillField);
+name.addEventListener('keyup', fillName);
+
+function fillJob(event){
+  const jobField = event.currentTarget;
+  cardJob.innerHTML = jobField.value;
+}
+
+job.addEventListener('keyup', fillJob);
