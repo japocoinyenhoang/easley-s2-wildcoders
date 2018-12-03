@@ -33,45 +33,46 @@
     <div class="fill__title--form">
         <label class="fill__label" for="email">
             Email
-            <input class="block" id="email" type="email" value="" name="email" placeholder="Ej: psmanagement@gmail.com">
+            <input class="block" id="email" type="email" value="mail" name="email" placeholder="Ej: psmanagement@gmail.com">
         </label>
     </div>
     <div class="fill__title--form">
         <label class="fill__label" for="phone__number">
             Teléfono
-            <input class="block" id="phone__number" type="tel" value="" name="phone__number" placeholder="Ej: 666555666">
+            <input class="block" id="phone__number" type="tel" value="phone" name="phone__number" placeholder="Ej: 666555666">
         </label>
     </div>
     <div class="fill__title--form">
         <label class="fill__label" for="linkedin__net">
             Linkedin
-            <input class="block" id="linkedin__net" type="url" value="" name="linkedin__net" placeholder="Ej: linkedin.com/paquita">
+            <input class="block" id="linkedin__net" type="url" value="linkedin" name="linkedin__net" placeholder="Ej: linkedin.com/paquita">
         </label>
     </div>
     <div class="fill__title--form">
         <label class="fill__label" for="gitHub__net">
             GitHub
-            <input class="block" id="gitHub__net" type="text" value="" name="gitHub__net" placeholder="Ej: @paquita-salas">
+            <input class="block" id="gitHub__net" type="text" value="github" name="gitHub__net" placeholder="Ej: @paquita-salas">
         </label>
     </div>
 <div class="form__skills-datacheckbox">
     <h4 class="fill__label title__skills">Habilidades (máximo 3)</h4>
 
     <div class="form__skills-html">
-        <label for="skills-data">
-            <input id="skills-data" type="checkbox" value="">
+        <!-- cambio las ids, porque no pueden estar repetidas y por tanto tb cambio los for-->
+        <label for="skills__data--html">
+            <input id="skills__data--html" class="message__checkbox" type="checkbox" value="html">
             HTML
         </label>
     </div>
     <div class="form__skills-css">
-        <label for="skills-data">
-            <input id="skills-data" type="checkbox" value="">
+        <label for="skills__data--css">
+            <input id="skills__data--css"  class="message__checkbox" type="checkbox" value="css">
             CSS
         </label>
     </div>
     <div class="form__skills-gulp">
-        <label for="skills-data">
-            <input id="skills-data" type="checkbox" value="">
+        <label for="skills__data--gulp">
+            <input id="skills__data--gulp"  class="message__checkbox" type="checkbox" value="gulp">
             GULP
         </label>
     </div>
