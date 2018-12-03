@@ -29,6 +29,7 @@ fieldset {
     display: flex;
 }
 
+
 // Pienso que se podrían unificar las clases de los recuadros de la paleta, puesto que he puesto cada background desde el HTML y solo necesitamos que nos de los tamaños, REVISAR //
 
 .color-1{
@@ -75,12 +76,15 @@ fieldset {
 .typo-1 {
     font-family: $typo1;
     font-size: 16px;
+    color: $gunmetal;
 }
 .typo-2 {
     font-family: $typo2;
     font-size: 16px;
+    color: $gunmetal;
 }
 .typo-3 {
     font-family: $typo3;
     font-size: 16px;
+    color: $gunmetal;
 }
