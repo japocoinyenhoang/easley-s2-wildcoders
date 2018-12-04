@@ -6,14 +6,14 @@ const name = document.querySelector('#fullName');
 const cardJob = document.querySelector('.card__data-job');
 const cardName = document.querySelector('.card__data-name');
 
-function fillName(event){
+function fillName(event) {
   const nameField = event.currentTarget;
   cardName.innerHTML = nameField.value;
 }
 
 name.addEventListener('keyup', fillName);
 
-function fillJob(event){
+function fillJob(event) {
   const jobField = event.currentTarget;
   cardJob.innerHTML = jobField.value;
 }
@@ -24,47 +24,32 @@ job.addEventListener('keyup', fillJob);
 
 
 
-// Añadir imagen
-
-// function init(){
-//   let selectedImage = document.getElementById('btn__add-img');
-//   selectedImage.addEventListener('change', mostrarImagen, false);
-// }
-
-// function mostrarImagen(event) {
-//   let file = event.target.files[0];
-//   let reader = new FileReader();
-//   reader.onload = function(event){
-//     let destinationImage =document.getElementById('card__img--profile');
-//     destinationImage.src= event.target.result;
-//   }
-//   reader.readAsDataURL(file);
-// }
-
-// window.addEventListener('load', init, false);
-
-// esto solo va con jquery
-// selectedImage.change(function(){
-//   readURL(this);
-
-// });
-
-// function readURL(input){
-//   if(input.files && input.files[0]){
-//       var reader = new FileReader();
-      
-//       reader.onload = function(e){
-//           destinationImage.attr('src', e.target.result);
-//       }
-      
-//       reader.readAsDataURL(input.files[0]);
-//   }
-// }
-
-// cuando seleccione la foto que la coloque en el recuadro de al lado, y en el card-editor
-
 
 // // telefono, mail, linkedin, github
+
+let checkedValue = document.querySelector('.message__checkbox:checked').value;
+checkedValue =null;
+
+const mailInfo = document.getElementById('card__mail');
+const phoneInfo = document.getElementById('card__phone');
+const linkedinInfo = document.getElementById('card__linkedin');
+const githubInfo = document.getElementById('card__github');
+
+const field = document.querySelectorAll('.block');
+
+function writeMe(e) {
+  const text = e.currentTarget.value;
+  const destID = e.currentTarget.getAttribute('data-dest');
+  const ico = e.currentTarget.getAttribute('data-ico');
+  document.querySelector(destID).innerHTML = ico + ': ' + text;
+
+}
+
+for (const i of field) {
+  i.addEventListener('keyup', writeMe)
+}
+
+
 // let email = document.getElementById('email');
 // //On Input Change Events
 // email.addEventListener('input', function () {
@@ -119,24 +104,24 @@ job.addEventListener('keyup', fillJob);
 // }
 
 
-function deleteArrowItem (){
-    const activableSection = document.querySelector('.card__skills-item');
-    if (activableSection.classList.contains('hidden')) {
-                activableSection.classList.remove('hidden');
-    } else { 
-                activableSection.classList.add('hidden');
+function deleteArrowItem() {
+  const activableSection = document.querySelector('.card__skills-item');
+  if (activableSection.classList.contains('hidden')) {
+    activableSection.classList.remove('hidden');
+  } else {
+    activableSection.classList.add('hidden');
+  }
+
+  let checkedValue = document.querySelector('.message__checkbox:checked').value;
+  // checkedValue =null;
+  let inputElements = document.getElementsByClassName('message__checkbox');
+  skills.length = 0;
+  for (let i = 0; skills.length <= 3; ++i) {
+    if (htmlSkill.value == checked) {
+      card__skills.innerHTML(htmlIcon);
+      break;
+
     }
 
-  let checkedValue = document.querySelector ('.message__checkbox:checked').value;
-  checkedValue =null;
-  let inputElements = document.getElementsByClassName('message__checkbox');
-  skills.length=0;
-  for(let i=0; skills.length<=3; ++i){
-    if(htmlSkill.value==checked){
-      card__skills.innerHTML (htmlIcon);
-      break;
-   
-    }
-    
   }
 }
