@@ -27,26 +27,35 @@ job.addEventListener('keyup', fillJob);
 
 // // telefono, mail, linkedin, github
 
-let checkedValue = document.querySelector('.message__checkbox:checked').value;
-checkedValue =null;
-
+// 1.creo las consntantes de donde voy a poner la informacion rellenada en los campos
 const mailInfo = document.getElementById('card__mail');
 const phoneInfo = document.getElementById('card__phone');
 const linkedinInfo = document.getElementById('card__linkedin');
 const githubInfo = document.getElementById('card__github');
 
+// 2.creo una contante que englobe todos los inputs, a recorrer.
 const field = document.querySelectorAll('.block');
 
+// 3. esta es mi funcion que recoge todo lo que escribo en los campos
 function writeMe(e) {
-  const text = e.currentTarget.value;
-  const destID = e.currentTarget.getAttribute('data-dest');
-  const ico = e.currentTarget.getAttribute('data-ico');
-  document.querySelector(destID).innerHTML = ico + ': ' + text;
 
+  // 5.compruebo que todo va bien. con esto muestro por consola los datos recogidos
+  // console.log (e.currentTarget.value);
+
+  //6. meto en una variable el valor de los daros recogidos.
+  const text = e.currentTarget.value;
+  // 7. que me muestre en pantall a donde va???....
+  console.log (e.currentTarget.getAttribute ('data-dest'));
 }
 
+//   const destID = e.currentTarget.getAttribute('data-dest');
+//   const ico = e.currentTarget.getAttribute('data-ico');
+//   document.querySelector(destID).innerHTML = ico + ': ' + text;
+
+// }
+// 4. 
 for (const i of field) {
-  i.addEventListener('keyup', writeMe)
+  i.addEventListener('keyup', writeMe);
 }
 
 
@@ -104,24 +113,24 @@ for (const i of field) {
 // }
 
 
-function deleteArrowItem() {
-  const activableSection = document.querySelector('.card__skills-item');
-  if (activableSection.classList.contains('hidden')) {
-    activableSection.classList.remove('hidden');
-  } else {
-    activableSection.classList.add('hidden');
-  }
+// function deleteArrowItem() {
+//   const activableSection = document.querySelector('.card__skills-item');
+//   if (activableSection.classList.contains('hidden')) {
+//     activableSection.classList.remove('hidden');
+//   } else {
+//     activableSection.classList.add('hidden');
+//   }
 
-  let checkedValue = document.querySelector('.message__checkbox:checked').value;
-  // checkedValue =null;
-  let inputElements = document.getElementsByClassName('message__checkbox');
-  skills.length = 0;
-  for (let i = 0; skills.length <= 3; ++i) {
-    if (htmlSkill.value == checked) {
-      card__skills.innerHTML(htmlIcon);
-      break;
+//   let checkedValue = document.querySelector('.message__checkbox:checked').value;
+//   // checkedValue =null;
+//   let inputElements = document.getElementsByClassName('message__checkbox');
+//   skills.length = 0;
+//   for (let i = 0; skills.length <= 3; ++i) {
+//     if (htmlSkill.value == checked) {
+//       card__skills.innerHTML(htmlIcon);
+//       break;
 
-    }
+//     }
 
-  }
-}
+//   }
+// // }
