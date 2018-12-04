@@ -24,6 +24,7 @@ fieldset {
     align-items: center;
     display: flex;
 }
+
 .input__label {
     display: flex;
 }
@@ -35,7 +36,6 @@ fieldset {
 .radio__color{
     padding-top: 25px;
 }
-// Pienso que se podrían unificar las clases de los recuadros de la paleta, puesto que he puesto cada background desde el HTML y solo necesitamos que nos de los tamaños, REVISAR //
 
 .color{
     width: 30px;

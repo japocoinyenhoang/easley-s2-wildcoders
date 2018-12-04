@@ -71,6 +71,7 @@
   padding-left: 15px;
   margin: 20px auto 10px;
   border-left: solid 5px $hospital-green;
+  //Hay que cambiar este color
 }
 
 
@@ -83,6 +84,7 @@
   line-height: 20px;
   color: $dark-green-blue;
   text-transform: capitalize;
+  //Hay que cambiar este color
 }
 
 
@@ -131,6 +133,7 @@
   margin-right: 5px;
   background-color: $dirty-blue;
   border-radius: 4px;
+  //Hay que cambiar este color
 }
 
 
@@ -138,11 +141,26 @@
   width: 32px;
   height: 32px;
   border-radius: 16px;
-  border: solid 2px $hospital-green;
-  color: $dark-green-blue;
   font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 10px;
+  //Hay que cambiar este color
+}
+
+
+.contact-icons__color1{
+  border: solid 2px #a2deaf;
+  color: #114e4e;
+}
+
+.contact-icons__color2{
+  border: 2px solid #e95626;
+  color: #420101;
+}
+
+.contact-icons__color3{
+  color: #3e5b65;
+  border: 2px solid #a0c0cf;
 }
