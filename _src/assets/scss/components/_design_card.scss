@@ -24,12 +24,21 @@ fieldset {
     align-items: center;
     display: flex;
 }
+
 .input__label-color {
     display: flex;
+    align-items: center;
+    margin-bottom: 20px;
 }
+
+.radioButtonColor {
+    margin-right: 10px;
+}
+
 .input__label-typo {
     display: flex;
 }
+
 .radio__typo{
     padding-top: 33px;
 }
@@ -37,48 +46,48 @@ fieldset {
 .radio__color{
     padding-top: 25px;
 }
+
 // Pienso que se podrían unificar las clases de los recuadros de la paleta, puesto que he puesto cada background desde el HTML y solo necesitamos que nos de los tamaños, REVISAR //
 
 .color{
     width: 30px;
     height: 30px;
-    margin-bottom: 20px;
 }
 
-.color-1{
-    background-color:#114e4e;
+.color-1 {
+    background-color: $dark-green-blue;
 }
 
-.color-2{
-    background-color:#438792;
+.color-2 {
+    background-color: $dirty-blue;
 }
 
-.color-3{
-    background-color: #a2deaf;
+.color-3 {
+    background-color: $hospital-green;
 }
 
-.color-4{
-    background-color: #420101;
+.color-4 {
+    background-color: $dried-blood;
 }
 
-.color-5{
-    background-color: #bd1010;
+.color-5 {
+    background-color: $rusty-red;
 }
 
-.color-6{
-    background-color: #e95626;
+.color-6 {
+    background-color: $tomato;
 }
 
-.color-7{
-    background-color: #3e5b65;
+.color-7 {
+    background-color: $slate;
 }
 
-.color-8{
-    background-color: #dfe5eb;
+.color-8 {
+    background-color: $pale-grey-two;
 }
 
-.color-9{
-    background-color: #a0c0cf;
+.color-9 {
+    background-color: $light-grey-blue;
 }
 
 .option__font-1 {
