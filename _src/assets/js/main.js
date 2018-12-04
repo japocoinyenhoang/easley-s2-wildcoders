@@ -24,14 +24,42 @@ job.addEventListener('keyup', fillJob);
 
 
 
+// Añadir imagen
+const selectedImage =document.getElementById('btn__add-img');
+const destinationImage =document.getElementById('card__img--profile');
+// al pulsar en el boton me abra el explorador de archivos
+
+
+
+// esto solo va con jquery
+// selectedImage.change(function(){
+//   readURL(this);
+
+// });
+
+// function readURL(input){
+//   if(input.files && input.files[0]){
+//       var reader = new FileReader();
+      
+//       reader.onload = function(e){
+//           destinationImage.attr('src', e.target.result);
+//       }
+      
+//       reader.readAsDataURL(input.files[0]);
+//   }
+// }
+
+// cuando seleccione la foto que la coloque en el recuadro de al lado, y en el card-editor
+
+
 // telefono, mail, linkedin, github
 let email = document.getElementById('email');
 //On Input Change Events
 email.addEventListener('input', function () {
    if (email.value.length == 0) {
-       document.getElementById('icon-email').innerHTML = 'John Doe';
+       document.getElementById('card__icon--mail').innerHTML = 'pepa pig';
    } else {
-       document.getElementById('icon-email').innerHTML = this.value;
+       document.getElementById('card__icon--mail').innerHTML = this.value;
    }
 });
 
