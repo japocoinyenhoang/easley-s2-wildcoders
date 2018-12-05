@@ -45,6 +45,8 @@
   font-size: 12px;
   line-height: 20px;
   color: $gunmetal;
+  outline: none;
+  cursor: pointer;
 }
 
 
@@ -64,6 +66,7 @@
 .ico__reset-text {
   display: inline-block;
   font-family: $font-text;
+  text-transform: uppercase;
 }
 
 
