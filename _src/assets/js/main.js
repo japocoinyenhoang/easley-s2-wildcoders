@@ -95,12 +95,15 @@ for (const c of colors) {
 }
 
 //LocalStorage
+const card2 = {
+  'name': ''
+}
 function myLocalStorage() {
   console.log('hola');
   let localField = '';
   localStorage.setItem('localField', JSON.stringify(nameField.value));
   const keepLocalStorage = localStorage.getItem('localField');
-  console.log(keepLocalStorage);
+  cardName.innerHTML = keepLocalStorage;
 }
 
 name.addEventListener('keyup', myLocalStorage);
