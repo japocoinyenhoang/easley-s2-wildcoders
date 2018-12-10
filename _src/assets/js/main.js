@@ -5,23 +5,18 @@ const job = document.querySelector('#job');
 const name = document.querySelector('#fullName');
 const cardJob = document.querySelector('.card__data-job');
 const cardName = document.querySelector('.card__data-name');
-let nameField = '';
-let jobField = '';
-
-// function fillName(event){
-//   const nameField = event.currentTarget;
-//   cardName.innerHTML = nameField.value;
-// }
+// let nameField = '';
+// const jobField = '';
 
 function fillName(event){
-  nameField = event.currentTarget;
+  let nameField = event.currentTarget;
   cardName.innerHTML = nameField.value;
 }
 
 name.addEventListener('keyup', fillName);
 
 function fillJob(event){
-  jobField = event.currentTarget;
+  let jobField = event.currentTarget;
   cardJob.innerHTML = jobField.value;
 }
 
