@@ -5,9 +5,15 @@ const job = document.querySelector('#job');
 const name = document.querySelector('#fullName');
 const cardJob = document.querySelector('.card__data-job');
 const cardName = document.querySelector('.card__data-name');
+let nameField = '';
+
+// function fillName(event){
+//   const nameField = event.currentTarget;
+//   cardName.innerHTML = nameField.value;
+// }
 
 function fillName(event){
-  const nameField = event.currentTarget;
+  nameField = event.currentTarget;
   cardName.innerHTML = nameField.value;
 }
 
@@ -35,7 +41,7 @@ const skillsTags = document.querySelectorAll('.card__skills-item');
 function applyPalette(e) {
   const p = parseInt(e.currentTarget.value);
   console.log('>',p);
-  
+
   if (p === 1) {
     /* En el caso del cardData, lo estamos manejando como un objeto HTML.
     Igual que en el ejemplo CodePen de Carlos */
@@ -43,7 +49,7 @@ function applyPalette(e) {
     //Objeto cardData
     cardData.classList.add('card-data__color1');
     cardData.classList.remove('card-data__color2', 'card-data__color3');
-    
+
     /* Pero en el caso de los iconos y los skills, estos tienen que ser manejados como
     listas de objetos HTML. Por eso usamos "querySelectorAll" en lugar de "querySelector" y
     hacemos un "for" para aplicar los cambios a todos sus elementos */
@@ -87,3 +93,16 @@ function applyPalette(e) {
 for (const c of colors) {
   c.addEventListener('change', applyPalette);
 }
+
+//LocalStorage
+function myLocalStorage() {
+  console.log('hola');
+  let localField = '';
+  localStorage.setItem('localField', JSON.stringify(nameField.value));
+  const keepLocalStorage = localStorage.getItem('localField');
+  console.log(keepLocalStorage);
+}
+
+name.addEventListener('keyup', myLocalStorage);
+
+
