@@ -87,6 +87,35 @@ for (const c of colors) {
   c.addEventListener('change', applyPalette);
 }
 
+//CAMBIAR TIIPOGRAFIA
+
+const inputRadio = document.querySelectorAll('.typo__radio');
+function applyTypo(e) {
+  const q = parseInt(e.currentTarget.value);
+
+  if (q === 1) {
+    // typo por defecto
+    cardName.classList.remove('typo-2', 'typo-3');
+    cardJob.classList.remove('typo-2', 'typo-3');
+  } else if (q === 2) {
+    // typo 2
+    cardName.classList.add('typo-2');
+    cardName.classList.remove('typo-3');
+    cardJob.classList.add('typo-2');
+    cardJob.classList.remove('typo-3');
+  } else {
+    // typo 3
+    cardName.classList.add('typo-3');
+    cardName.classList.remove('typo-2');
+    cardJob.classList.add('typo-3');
+    cardJob.classList.remove('typo-2');
+  }
+}
+
+for (const t of inputRadio) {
+  t.addEventListener('click', applyTypo);
+}
+
 // skills
 // lista de objetos que aparecen y desaparecen cuadno los selecciono en fill.card
 // const skillsTags = document.querySelectorAll('.card__skills-item'); que ya esta definido arriba para los tres.
@@ -99,9 +128,9 @@ const gulpSkill = document.getElementById('skills-data3');
 // const Skills =[htmlSkill,cssSkill,gulpSkill];
 
 // si estas seleccionados que se quite la clase que les mantiene ocultos
-let chb = '';
+//let chb = '';
 const skillCheck =()=> {
-  chb = document.querySelectorAll('skills__checkbox');
+  //chb = document.querySelectorAll('skills__checkbox');
 
   for (const sk of skillsTags){
     sk.classList.add('hidden');
