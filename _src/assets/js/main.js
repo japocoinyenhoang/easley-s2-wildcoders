@@ -6,14 +6,14 @@ const name = document.querySelector('#fullName');
 const cardJob = document.querySelector('.card__data-job');
 const cardName = document.querySelector('.card__data-name');
 
-function fillName(event){
+function fillName(event) {
   const nameField = event.currentTarget;
   cardName.innerHTML = nameField.value;
 }
 
 name.addEventListener('keyup', fillName);
 
-function fillJob(event){
+function fillJob(event) {
   const jobField = event.currentTarget;
   cardJob.innerHTML = jobField.value;
 }
@@ -31,11 +31,10 @@ const cardData = document.querySelector('.card__data');
 //Listas de objetos HTML que cambian de color
 const contactIcons = document.querySelectorAll('.contact-icons');
 const skillsTags = document.querySelectorAll('.card__skills-item');
-
 function applyPalette(e) {
   const p = parseInt(e.currentTarget.value);
-  console.log('>',p);
-  
+  console.log('>', p);
+
   if (p === 1) {
     /* En el caso del cardData, lo estamos manejando como un objeto HTML.
     Igual que en el ejemplo CodePen de Carlos */
@@ -43,7 +42,7 @@ function applyPalette(e) {
     //Objeto cardData
     cardData.classList.add('card-data__color1');
     cardData.classList.remove('card-data__color2', 'card-data__color3');
-    
+
     /* Pero en el caso de los iconos y los skills, estos tienen que ser manejados como
     listas de objetos HTML. Por eso usamos "querySelectorAll" en lugar de "querySelector" y
     hacemos un "for" para aplicar los cambios a todos sus elementos */
@@ -89,31 +88,37 @@ for (const c of colors) {
 }
 
 // skills
-// losta de objetos que aparecen y desaparecen cuadno los selecciono en fill.card
+// lista de objetos que aparecen y desaparecen cuadno los selecciono en fill.card
 // const skillsTags = document.querySelectorAll('.card__skills-item'); que ya esta definido arriba para los tres.
 // y para cada uno de ellos:
 
-const htmlSkill=document.getElementById('skill__1');
-const cssSkill=document.getElementById('skill__2');
-const gulpSkill=document.getElementById('skill__3');
+const htmlSkill = document.getElementById('skills-data1');
+const cssSkill = document.getElementById('skills-data2');
+const gulpSkill = document.getElementById('skills-data3');
 
 // const Skills =[htmlSkill,cssSkill,gulpSkill];
 
 // si estas seleccionados que se quite la clase que les mantiene ocultos
-function skillCheck(){
+let chb = '';
+const skillCheck =()=> {
+  chb = document.querySelectorAll('skills__checkbox');
 
-  let chb=document.querySelector('skills__checkbox');
-  chb.classList.add('hidden');
-  if (chb[0].checked){
-    htmlSkill.classList.remove('hidden');
+  for (const sk of skillsTags){
+    sk.classList.add('hidden');
+    sk.classList.remove('hidden');
+    if (htmlSkill.checked) {
+      sk.classList.remove('hidden');
+
+    }
+    if (cssSkill.checked) {
+      sk.classList.remove('hidden');
+    }
+    if (gulpSkill.checked) {
+      sk.classList.remove('hidden');
+    }
   }
-  if (chb[1].checked){
-    cssSkill.classList.remove('hidden');
-  }
-  if (chb[2].checked){
-    gulpSkill.classList.remove('hidden');
-  }
-}
+};
+
 htmlSkill.addEventListener('change', skillCheck());
 cssSkill.addEventListener('change', skillCheck());
 gulpSkill.addEventListener('change', skillCheck());
