@@ -38,10 +38,12 @@
     border: 1px solid #a2deaf;
     margin-left: 20px;
     margin-top: 6px;
+    background: top center no-repeat;
+    background-size: cover;
 }
 #btn__add-img{
     display: none;
-} 
+}
 
 .btn__img--false{
     background-color: $color-primary;

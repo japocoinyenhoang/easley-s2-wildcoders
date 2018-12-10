@@ -35,7 +35,7 @@ const skillsTags = document.querySelectorAll('.card__skills-item');
 function applyPalette(e) {
   const p = parseInt(e.currentTarget.value);
   console.log('>',p);
-  
+
   if (p === 1) {
     /* En el caso del cardData, lo estamos manejando como un objeto HTML.
     Igual que en el ejemplo CodePen de Carlos */
@@ -43,7 +43,7 @@ function applyPalette(e) {
     //Objeto cardData
     cardData.classList.add('card-data__color1');
     cardData.classList.remove('card-data__color2', 'card-data__color3');
-    
+
     /* Pero en el caso de los iconos y los skills, estos tienen que ser manejados como
     listas de objetos HTML. Por eso usamos "querySelectorAll" en lugar de "querySelector" y
     hacemos un "for" para aplicar los cambios a todos sus elementos */
@@ -94,7 +94,7 @@ const fr = new FileReader();
 const uploadBtn = document.querySelector('.btn__add-img');
 const fileField = document.querySelector('#btn__add-img');
 const profileImage = document.querySelector('.card__img');
-const divPreviewImage = document.querySelector('.square__img--content');
+const divPreviewImage = document.querySelector('.square__img');
 
 function getImage(e){
   const myFile = e.currentTarget.files[0];
@@ -103,13 +103,14 @@ function getImage(e){
 }
 
 function writeImage() {
-  profileImage.style.backgroundImg= `url(${fr.result})`;
-  divPreviewImage.style.backgroundImg = `url(${fr.result})`;
+  console.log('Hola');
+  profileImage.style.backgroundImage= `url(${fr.result})`;
+  divPreviewImage.style.backgroundImage = `url(${fr.result})`;
 }
 
 function fakeFileClick() {
-  fileField.click(); 
- }
+  fileField.click();
+}
 
 fileField.addEventListener('change', getImage);
 uploadBtn.addEventListener('click', fakeFileClick);
