@@ -121,33 +121,43 @@ for (const t of inputRadio) {
 // const skillsTags = document.querySelectorAll('.card__skills-item'); que ya esta definido arriba para los tres.
 // y para cada uno de ellos:
 
-const htmlSkill = document.getElementById('skills-data1');
+/* const htmlSkill = document.getElementById('skills-data1');
 const cssSkill = document.getElementById('skills-data2');
-const gulpSkill = document.getElementById('skills-data3');
+const gulpSkill = document.getElementById('skills-data3'); */
 
 // const Skills =[htmlSkill,cssSkill,gulpSkill];
 
 // si estas seleccionados que se quite la clase que les mantiene ocultos
 //let chb = '';
-const skillCheck =()=> {
-  //chb = document.querySelectorAll('skills__checkbox');
 
-  for (const sk of skillsTags){
-    sk.classList.add('hidden');
-    sk.classList.remove('hidden');
-    if (htmlSkill.checked) {
-      sk.classList.remove('hidden');
 
-    }
-    if (cssSkill.checked) {
-      sk.classList.remove('hidden');
-    }
-    if (gulpSkill.checked) {
-      sk.classList.remove('hidden');
-    }
+const listadeloschecks = document.querySelectorAll('.skills__checkbox');
+
+const skillCheck = (e) => {
+  const b = e.currentTarget;
+  const numberValue = parseInt(b.value);
+  const isChecked = b.checked;
+
+  if (isChecked && numberValue === 1) {
+    skillsTags[0].classList.remove('hidden');
+  } else if (isChecked && numberValue === 2) {
+    skillsTags[1].classList.remove('hidden');
+  } else if (isChecked && numberValue === 3) {
+    skillsTags[2].classList.remove('hidden');
+  } else if (!isChecked && numberValue === 1) {
+    skillsTags[0].classList.add('hidden');
+  } else if (!isChecked && numberValue === 2) {
+    skillsTags[1].classList.add('hidden');
+  } else {
+    skillsTags[2].classList.add('hidden');
   }
 };
 
-htmlSkill.addEventListener('change', skillCheck());
+for (const check of listadeloschecks) {
+  check.addEventListener('click', skillCheck);
+}
+
+/* htmlSkill.addEventListener('change', skillCheck());
 cssSkill.addEventListener('change', skillCheck());
 gulpSkill.addEventListener('change', skillCheck());
+*/
