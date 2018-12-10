@@ -87,3 +87,33 @@ function applyPalette(e) {
 for (const c of colors) {
   c.addEventListener('change', applyPalette);
 }
+
+// skills
+// losta de objetos que aparecen y desaparecen cuadno los selecciono en fill.card
+// const skillsTags = document.querySelectorAll('.card__skills-item'); que ya esta definido arriba para los tres.
+// y para cada uno de ellos:
+
+const htmlSkill=document.getElementById('skill__1');
+const cssSkill=document.getElementById('skill__2');
+const gulpSkill=document.getElementById('skill__3');
+
+// const Skills =[htmlSkill,cssSkill,gulpSkill];
+
+// si estas seleccionados que se quite la clase que les mantiene ocultos
+function skillCheck(){
+
+  let chb=document.querySelector('skills__checkbox');
+  chb.classList.add('hidden');
+  if (chb[0].checked){
+    htmlSkill.classList.remove('hidden');
+  }
+  if (chb[1].checked){
+    cssSkill.classList.remove('hidden');
+  }
+  if (chb[2].checked){
+    gulpSkill.classList.remove('hidden');
+  }
+}
+htmlSkill.addEventListener('change', skillCheck());
+cssSkill.addEventListener('change', skillCheck());
+gulpSkill.addEventListener('change', skillCheck());
