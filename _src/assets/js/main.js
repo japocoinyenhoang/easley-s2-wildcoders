@@ -95,7 +95,7 @@ for (const c of colors) {
 //   'name': '',
 //   'mail': ''
 // }
-function myLocalStorage() {
+function myLocalStorage(){
   let localField = nameField.value;
   let localFieldJob = jobField.value;
 
@@ -113,5 +113,3 @@ function myLocalStorage() {
 
 name.addEventListener('keyup', myLocalStorage);
 job.addEventListener('keyup', myLocalStorage);
-
-
