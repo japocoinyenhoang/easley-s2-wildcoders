@@ -34,7 +34,6 @@ const skillsTags = document.querySelectorAll('.card__skills-item');
 
 function applyPalette(e) {
   const p = parseInt(e.currentTarget.value);
-  console.log('>',p);
 
   if (p === 1) {
     /* En el caso del cardData, lo estamos manejando como un objeto HTML.
@@ -103,7 +102,6 @@ function getImage(e){
 }
 
 function writeImage() {
-  console.log('Hola');
   profileImage.style.backgroundImage= `url(${fr.result})`;
   divPreviewImage.style.backgroundImage = `url(${fr.result})`;
 }
