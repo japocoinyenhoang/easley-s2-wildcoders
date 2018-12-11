@@ -38,18 +38,27 @@
     border: 1px solid #a2deaf;
     margin-left: 20px;
     margin-top: 6px;
+    background: top center no-repeat;
+    background-size: cover;
+}
+#btn__add-img{
+    display: none;
 }
 
-#btn__add-img{
+.btn__img--false{
     background-color: $color-primary;
     border: none;
+    margin: 6px;
     width: 140px;
     height: 30px;
     border-radius: 3px;
     color: #f5f5f5;
     font-family: $font-text;
     box-shadow: 0 0 4px 0 rgba(0,0,0,0.32);
+    outline: none;
+    cursor: pointer;
 }
+
 
 .form__skills-css{
     margin-bottom: 15px;
