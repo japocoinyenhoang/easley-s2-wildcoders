@@ -5,15 +5,48 @@ const job = document.querySelector('#job');
 const name = document.querySelector('#fullName');
 const cardJob = document.querySelector('.card__data-job');
 const cardName = document.querySelector('.card__data-name');
+
+const cardStorage = {
+  'palette': '',
+  'typography': '',
+  'name': '',
+  'job': '',
+  'mail': '',
+  'phone': '',
+  'linkedin': '',
+  'github': '',
+  'photo': '',
+  'skills': ''
+};
+
 // let nameField = '';
-// const jobField = '';
 
 function fillName(event){
   let nameField = event.currentTarget;
   cardName.innerHTML = nameField.value;
+  cardStorage.name=nameField.value;
+  // Al ejecutar fillName hacemos que myLocalStorage funcione
+  myLocalStorage();
+}
+function myLocalStorage(){
+  let localField = nameField.value;
+  localStorage.setItem('name', JSON.stringify(localField));
+  const storageName = localStorage.getItem('localField');
+  cardName.innerHTML = storageName;
+
 }
 
+
 name.addEventListener('keyup', fillName);
+// name.addEventListener('keyup', fillName);
+
+// function fillName(event){
+//   let nameField = event.currentTarget;
+//   cardName.innerHTML = nameField.value;
+//   cardStorage.name=nameField.value;
+// }
+
+
 
 function fillJob(event){
   let jobField = event.currentTarget;
@@ -36,7 +69,6 @@ const skillsTags = document.querySelectorAll('.card__skills-item');
 
 function applyPalette(e) {
   const p = parseInt(e.currentTarget.value);
-  console.log('>',p);
 
   if (p === 1) {
     /* En el caso del cardData, lo estamos manejando como un objeto HTML.
@@ -90,28 +122,27 @@ for (const c of colors) {
   c.addEventListener('change', applyPalette);
 }
 
-//LocalStorage
-// const card2 = {
-//   'name': '',
-//   'mail': ''
+// LocalStorage
+
+
+
+// function myLocalStorage() {
+//   let localField = nameField.value;
+//   let localFieldJob = jobField.value;
+
+//     //Con esta parte del código guardamos en local el nombre
+//   // localStorage.setItem('name', JSON.stringify(localField));
+//   // const storageName = localStorage.getItem('localField');
+//   // cardName.innerHTML = storageName;
+
+//     // Con esta parte del código guardamos la profesión
+//   localStorage.setItem('job', JSON.stringify(localFieldJob));
+//   const storageJob = localStorage.getItem('localFieldJob');
+//   cardJob.innerHTML = storageJob;
+
 // }
-function myLocalStorage() {
-  let localField = nameField.value;
-  let localFieldJob = jobField.value;
 
-    //Con esta parte del código guardamos en local el nombre
-  localStorage.setItem('name', JSON.stringify(localField));
-  const storageName = localStorage.getItem('localField');
-  cardName.innerHTML = storageName;
-
-    // Con esta parte del código guardamos la profesión
-  localStorage.setItem('job', JSON.stringify(localFieldJob));
-  const storageJob = localStorage.getItem('localFieldJob');
-  cardJob.innerHTML = storageJob;
-
-}
-
-name.addEventListener('keyup', myLocalStorage);
-job.addEventListener('keyup', myLocalStorage);
+// name.addEventListener('keyup', myLocalStorage);
+// job.addEventListener('keyup', myLocalStorage);
 
 
