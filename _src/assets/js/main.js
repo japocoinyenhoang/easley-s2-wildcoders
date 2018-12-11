@@ -6,9 +6,26 @@ const name = document.querySelector('#fullName');
 const cardJob = document.querySelector('.card__data-job');
 const cardName = document.querySelector('.card__data-name');
 
+const dataJason = {
+  "name": "",
+  "job": "",
+  "photo": "",
+  "palette": "",
+  "typography": "",
+  "email": "",
+  "phone": "",
+  "linkedin": "",
+  "github": "",
+  "skills": ["", "", ""]
+  };
+
+
+console.log(dataJason);
+
 function fillName(event) {
   const nameField = event.currentTarget;
   cardName.innerHTML = nameField.value;
+  dataJason.name = nameField.value;
 }
 
 name.addEventListener('keyup', fillName);
@@ -16,6 +33,8 @@ name.addEventListener('keyup', fillName);
 function fillJob(event) {
   const jobField = event.currentTarget;
   cardJob.innerHTML = jobField.value;
+  dataJason.job = jobField.value;
+
 }
 
 job.addEventListener('keyup', fillJob);
@@ -87,7 +106,7 @@ for (const c of colors) {
   c.addEventListener('change', applyPalette);
 }
 
-//CAMBIAR TIIPOGRAFIA
+//CAMBIAR TIPOGRAFIA
 
 const inputRadio = document.querySelectorAll('.typo__radio');
 function applyTypo(e) {
@@ -157,7 +176,3 @@ for (const check of listadeloschecks) {
   check.addEventListener('click', skillCheck);
 }
 
-/* htmlSkill.addEventListener('change', skillCheck());
-cssSkill.addEventListener('change', skillCheck());
-gulpSkill.addEventListener('change', skillCheck());
-*/
