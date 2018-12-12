@@ -125,6 +125,7 @@
   margin: 0;
   padding: 10px 20px;
   border-bottom: 2px solid $dirty-blue20;
+  min-height: 32px;
 }
 
 
@@ -184,4 +185,8 @@
 .contact-icons__color3 {
   color: $slate;
   border: solid 2px $light-grey-blue;
+}
+
+.hidden {
+  display: none;
 }

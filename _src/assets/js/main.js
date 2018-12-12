@@ -17,7 +17,7 @@ const dataJason = {
   "linkedin": "",
   "github": "",
   "skills": ["", "", ""]
-  };
+};
 
 
 console.log(dataJason);
@@ -135,20 +135,10 @@ for (const t of inputRadio) {
   t.addEventListener('click', applyTypo);
 }
 
-// skills
+
+
 // lista de objetos que aparecen y desaparecen cuadno los selecciono en fill.card
 // const skillsTags = document.querySelectorAll('.card__skills-item'); que ya esta definido arriba para los tres.
-// y para cada uno de ellos:
-
-/* const htmlSkill = document.getElementById('skills-data1');
-const cssSkill = document.getElementById('skills-data2');
-const gulpSkill = document.getElementById('skills-data3'); */
-
-// const Skills =[htmlSkill,cssSkill,gulpSkill];
-
-// si estas seleccionados que se quite la clase que les mantiene ocultos
-//let chb = '';
-
 
 const listadeloschecks = document.querySelectorAll('.skills__checkbox');
 
@@ -175,4 +165,70 @@ const skillCheck = (e) => {
 for (const check of listadeloschecks) {
   check.addEventListener('click', skillCheck);
 }
+
+// DATOS: MAIL, TELEFONO, LINKEDIN, GITHUB
+// ya definido arriba const contactIcons = document.querySelectorAll('.contact-icons');
+
+const email = document.getElementById('email');
+function fillEmail(e){
+  const emailField= e.currentTarget;
+  if (email.value.length !== 0) {
+    contactIcons[1].classList.remove('hidden');
+    email.value=emailField.value;
+    console.log(email.value);
+  }else{
+    contactIcons[1].classList.add('hidden');
+    console.log('este campo esta vacio');
+  }
+}
+
+email.addEventListener('input', fillEmail);
+
+
+const phone = document.getElementById('phone__number');
+function fillPhone(e){
+  const phoneField= e.currentTarget;
+  if (phone.value.length !== 0) {
+    contactIcons[0].classList.remove('hidden');
+    phone.value=phoneField.value;
+    console.log(phone.value);
+  }else{
+    contactIcons[0].classList.add('hidden');
+    console.log('este campo esta vacio');
+
+  }
+}
+phone.addEventListener('input', fillPhone);
+
+
+const linkedin = document.getElementById('linkedin__net');
+function fillLinkedin(e){
+  const linkedinField= e.currentTarget;
+  if (linkedin.value.length !== 0) {
+    contactIcons[2].classList.remove('hidden');
+    linkedin.value=linkedinField.value;
+    console.log(linkedin.value);
+  }else{
+    contactIcons[2].classList.add('hidden');
+    console.log('este campo esta vacio');
+
+  }
+}
+linkedin.addEventListener('input', fillLinkedin);
+
+const github = document.getElementById('gitHub__net');
+function fillGithub(e){
+  const githubField= e.currentTarget;
+  if (github.value.length !== 0) {
+    contactIcons[3].classList.remove('hidden');
+    github.value=githubField.value;
+    console.log(github.value);
+  }else{
+    contactIcons[3].classList.add('hidden');
+    console.log('este campo esta vacio');
+
+  }
+}
+github.addEventListener('input', fillGithub);
+
 
