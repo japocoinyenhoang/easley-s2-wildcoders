@@ -53,6 +53,7 @@ const skillsTags = document.querySelectorAll('.card__skills-item');
 function applyPalette(e) {
   const p = parseInt(e.currentTarget.value);
   console.log('>', p);
+  dataJason.palette = p;
 
   if (p === 1) {
     /* En el caso del cardData, lo estamos manejando como un objeto HTML.
@@ -111,6 +112,8 @@ for (const c of colors) {
 const inputRadio = document.querySelectorAll('.typo__radio');
 function applyTypo(e) {
   const q = parseInt(e.currentTarget.value);
+  dataJason.typography = q;
+
 
   if (q === 1) {
     // typo por defecto
@@ -140,7 +143,7 @@ for (const t of inputRadio) {
 // lista de objetos que aparecen y desaparecen cuadno los selecciono en fill.card
 // const skillsTags = document.querySelectorAll('.card__skills-item'); que ya esta definido arriba para los tres.
 
-const listadeloschecks = document.querySelectorAll('.skills__checkbox');
+const checkList = document.querySelectorAll('.skills__checkbox');
 
 const skillCheck = (e) => {
   const b = e.currentTarget;
@@ -162,7 +165,7 @@ const skillCheck = (e) => {
   }
 };
 
-for (const check of listadeloschecks) {
+for (const check of checkList) {
   check.addEventListener('click', skillCheck);
 }
 
