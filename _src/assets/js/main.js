@@ -140,7 +140,7 @@ for (const t of inputRadio) {
 // lista de objetos que aparecen y desaparecen cuadno los selecciono en fill.card
 // const skillsTags = document.querySelectorAll('.card__skills-item'); que ya esta definido arriba para los tres.
 
-const listadeloschecks = document.querySelectorAll('.skills__checkbox');
+const skillsCheckList = document.querySelectorAll('.skills__checkbox');
 
 const skillCheck = (e) => {
   const b = e.currentTarget;
@@ -162,9 +162,9 @@ const skillCheck = (e) => {
   }
 };
 
-for (const check of listadeloschecks) {
-  check.addEventListener('click', skillCheck);
-}
+// for (const check of skillsCheckList) {
+//   check.addEventListener('click', skillCheck);
+// }
 
 // DATOS: MAIL, TELEFONO, LINKEDIN, GITHUB
 // ya definido arriba const contactIcons = document.querySelectorAll('.contact-icons');
@@ -255,3 +255,22 @@ function fakeFileClick() {
 fileField.addEventListener('change', getImage);
 uploadBtn.addEventListener('click', fakeFileClick);
 
+
+//Hacer la petición de las Skills
+let apiSkills;
+const skillsForm = document.querySelector('.form__skills-html');
+
+function askForSkills() {
+  fetch('https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json')
+    .then(apiSkillsResponse => apiSkillsResponse.json())
+    .then(apiSkillsData => {
+      let emptySkills = [];
+      const skillsLength = apiSkillsData.skills.length;
+      for (let i = 0; i < skillsLength; i++){
+        emptySkills.push(apiSkillsData.skills[i]);
+      }
+      console.log(emptySkills);
+    });
+}
+
+askForSkills();
