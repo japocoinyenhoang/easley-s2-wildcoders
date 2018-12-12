@@ -229,4 +229,3 @@ function fillGithub(e) {
 github.addEventListener('input', fillGithub);
 
 
-console.log(dataJason);
