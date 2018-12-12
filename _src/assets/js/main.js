@@ -258,7 +258,7 @@ uploadBtn.addEventListener('click', fakeFileClick);
 
 //Hacer la petición de las Skills
 let apiSkills;
-const skillsForm = document.querySelector('.form__skills-html');
+const skillsForm = document.querySelector('.form__skills-datacheckbox');
 
 function askForSkills() {
   fetch('https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json')
@@ -272,6 +272,12 @@ function askForSkills() {
       for (let i = 0; i < skillsLength; i++){
         //Push sirve para meter dentro del array vació los elementos del array que hemos recibido
         emptySkills.push(apiSkillsData.skills[i]);
+        skillsForm.innerHTML += `<div class="form__skills">
+     <label for="skills-data">
+            <input id="skills-data1" class="skills__checkbox" type="checkbox" value="${[i]}">
+            ${emptySkills[i]}
+        </label>
+      </div>`;
       }
       console.log(emptySkills);
     });
