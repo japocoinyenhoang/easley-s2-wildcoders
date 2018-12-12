@@ -170,65 +170,63 @@ for (const check of listadeloschecks) {
 // ya definido arriba const contactIcons = document.querySelectorAll('.contact-icons');
 
 const email = document.getElementById('email');
-function fillEmail(e){
-  const emailField= e.currentTarget;
+function fillEmail(e) {
+  const emailField = e.currentTarget;
+  dataJason.email = emailField.value;
   if (email.value.length !== 0) {
     contactIcons[1].classList.remove('hidden');
-    email.value=emailField.value;
-    console.log(email.value);
-  }else{
+    email.value = emailField.value;
+  } else {
     contactIcons[1].classList.add('hidden');
     console.log('este campo esta vacio');
   }
 }
-
 email.addEventListener('input', fillEmail);
 
 
 const phone = document.getElementById('phone__number');
-function fillPhone(e){
-  const phoneField= e.currentTarget;
+function fillPhone(e) {
+  const phoneField = e.currentTarget;
+  dataJason.phone = phoneField.value;
   if (phone.value.length !== 0) {
     contactIcons[0].classList.remove('hidden');
-    phone.value=phoneField.value;
-    console.log(phone.value);
-  }else{
+    phone.value = phoneField.value;
+  } else {
     contactIcons[0].classList.add('hidden');
     console.log('este campo esta vacio');
-
   }
 }
 phone.addEventListener('input', fillPhone);
 
 
 const linkedin = document.getElementById('linkedin__net');
-function fillLinkedin(e){
-  const linkedinField= e.currentTarget;
+function fillLinkedin(e) {
+  const linkedinField = e.currentTarget;
+  dataJason.linkedin = linkedinField.value;
   if (linkedin.value.length !== 0) {
     contactIcons[2].classList.remove('hidden');
-    linkedin.value=linkedinField.value;
-    console.log(linkedin.value);
-  }else{
+    linkedin.value = linkedinField.value;
+  } else {
     contactIcons[2].classList.add('hidden');
     console.log('este campo esta vacio');
-
   }
 }
 linkedin.addEventListener('input', fillLinkedin);
 
+
 const github = document.getElementById('gitHub__net');
-function fillGithub(e){
-  const githubField= e.currentTarget;
+function fillGithub(e) {
+  const githubField = e.currentTarget;
+  dataJason.github = githubField.value;
   if (github.value.length !== 0) {
     contactIcons[3].classList.remove('hidden');
-    github.value=githubField.value;
-    console.log(github.value);
-  }else{
+    github.value = githubField.value;
+  } else {
     contactIcons[3].classList.add('hidden');
     console.log('este campo esta vacio');
-
   }
 }
 github.addEventListener('input', fillGithub);
 
 
+console.log(dataJason);
