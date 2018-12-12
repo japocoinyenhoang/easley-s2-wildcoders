@@ -138,10 +138,7 @@ for (const t of inputRadio) {
   t.addEventListener('click', applyTypo);
 }
 
-
-
-// lista de objetos que aparecen y desaparecen cuadno los selecciono en fill.card
-// const skillsTags = document.querySelectorAll('.card__skills-item'); que ya esta definido arriba para los tres.
+//LISTA SKILLS
 
 const checkList = document.querySelectorAll('.skills__checkbox');
 
