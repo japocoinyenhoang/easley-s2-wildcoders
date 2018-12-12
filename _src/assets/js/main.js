@@ -163,7 +163,7 @@ const skillCheck = (e) => {
 };
 
 // for (const check of skillsCheckList) {
-//   check.addEventListener('click', skillCheck);
+  // check.addEventListener('click', skillCheck);
 // }
 
 // DATOS: MAIL, TELEFONO, LINKEDIN, GITHUB
@@ -269,7 +269,7 @@ function askForSkills() {
       //Declaras una nueva variable para definir la longitud del array
       const skillsLength = apiSkillsData.skills.length;
       //Haces un bucle para recorrer la información recibida. Si en vez de skillsLength pones  apiSkillsData.skills.length no funciona, por eso hemos declarado previamente una variable
-      for (let i = 0; i < skillsLength; i++){
+      for (let i = 0; i < skillsLength; i++) {
         //Push sirve para meter dentro del array vació los elementos del array que hemos recibido
         emptySkills.push(apiSkillsData.skills[i]);
         skillsForm.innerHTML += `<div class="form__skills">
@@ -282,5 +282,27 @@ function askForSkills() {
       console.log(emptySkills);
     });
 }
+
+// function checkBoxLimit() {
+//   const checkBoxGroup = document.querySelectorAll('.skills__checkbox');
+//   const limit = 3;
+//   for (let i = 0; i < checkBoxGroup.length; i++) {
+//     checkBoxGroup[i].onclick = function () {
+//       let checkedcount = 0;
+//       for (let i = 0; i < checkBoxGroup.length; i++) {
+//         checkedcount += (checkBoxGroup[i].checked) ? 1 : 0;
+//       }
+//       if (checkedcount > limit) {
+//         alert("You can select only a maximum of " + limit + " checkboxes.");
+//         this.checked = false;
+//       }
+//     }
+//   }
+// }
+
+// for (const check of skillsCheckList) {
+//   check.addEventListener('click', checkBoxLimit);
+// }
+
 
 askForSkills();
