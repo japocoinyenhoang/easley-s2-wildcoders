@@ -280,29 +280,24 @@ function askForSkills() {
       </div>`;
       }
       console.log(emptySkills);
+      checkBoxLimit();
     });
 }
 
-// function checkBoxLimit() {
-//   const checkBoxGroup = document.querySelectorAll('.skills__checkbox');
-//   const limit = 3;
-//   for (let i = 0; i < checkBoxGroup.length; i++) {
-//     checkBoxGroup[i].onclick = function () {
-//       let checkedcount = 0;
-//       for (let i = 0; i < checkBoxGroup.length; i++) {
-//         checkedcount += (checkBoxGroup[i].checked) ? 1 : 0;
-//       }
-//       if (checkedcount > limit) {
-//         alert("You can select only a maximum of " + limit + " checkboxes.");
-//         this.checked = false;
-//       }
-//     }
-//   }
-// }
-
-// for (const check of skillsCheckList) {
-//   check.addEventListener('click', checkBoxLimit);
-// }
-
-
+function checkBoxLimit() {
+  const checkBoxGroup = document.querySelectorAll('.skills__checkbox');
+  const limit = 3;
+  for (let i = 0; i < checkBoxGroup.length; i++) {
+    checkBoxGroup[i].onclick = function () {
+      let checkedcount = 0;
+      for (let i = 0; i < checkBoxGroup.length; i++) {
+        checkedcount += (checkBoxGroup[i].checked) ? 1 : 0;
+      }
+      if (checkedcount > limit) {
+        alert("Elige un máximo de " + limit + " habilidades.");
+        this.checked = false;
+      }
+    }
+  }
+}
 askForSkills();
