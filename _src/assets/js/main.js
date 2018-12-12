@@ -187,19 +187,19 @@ function fillEmail(e) {
 email.addEventListener('input', fillEmail);
 
 
-const phone = document.getElementById('phone__number');
+const phoneNumber = document.getElementById('phone__number');
 function fillPhone(e) {
   const phoneField = e.currentTarget;
   dataJason.phone = phoneField.value;
-  if (phone.value.length !== 0) {
+  if (phoneNumber.value.length !== 0) {
     contactIcons[0].classList.remove('hidden');
-    phone.value = phoneField.value;
+    phoneNumber.value = phoneField.value;
   } else {
     contactIcons[0].classList.add('hidden');
     console.log('este campo esta vacio');
   }
 }
-phone.addEventListener('input', fillPhone);
+phoneNumber.addEventListener('input', fillPhone);
 
 
 const linkedin = document.getElementById('linkedin__net');
@@ -244,6 +244,8 @@ function getImage(e) {
   const myFile = e.currentTarget.files[0];
   fr.addEventListener('load', writeImage);
   fr.readAsDataURL(myFile);
+  dataJason.photo = myFile;
+
 }
 
 function writeImage() {
