@@ -36,7 +36,6 @@ function myLocalStorage(){
 
 }
 
-
 name.addEventListener('keyup', fillName);
 // name.addEventListener('keyup', fillName);
 
@@ -122,14 +121,6 @@ for (const c of colors) {
   c.addEventListener('change', applyPalette);
 }
 
-//LocalStorage
-// const card2 = {
-//   'name': '',
-//   'mail': ''
-// }
-function myLocalStorage(){
-  let localField = nameField.value;
-  let localFieldJob = jobField.value;
 
 // LocalStorage
 
@@ -151,9 +142,5 @@ function myLocalStorage(){
 
 // }
 
-name.addEventListener('keyup', myLocalStorage);
-job.addEventListener('keyup', myLocalStorage);
 // name.addEventListener('keyup', myLocalStorage);
 // job.addEventListener('keyup', myLocalStorage);
-
-
