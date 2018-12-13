@@ -1,5 +1,55 @@
 'use strict';
 
+
+/* // Si contiene la clase hidden
+if (activableSection.classList.contains('hidden')) {
+  // Elimina la clase
+  activableSection.classList.remove('hidden');
+} else { // Sino
+  // Añade la clase hidden
+  activableSection.classList.add('hidden');
+}
+//Desplegables */
+
+const open = document.querySelectorAll('.bar__menu-card');
+const contDesign = document.querySelector('.container__radios');
+const contFill = document.querySelector('.container__fill');
+const contShare = document.querySelector('.share_btn--container');
+
+const handlerDesign = () => {
+
+  if (contDesign.classList.contains('hidden')) {
+    contDesign.classList.remove('hidden');
+    contFill.classList.add('hidden');
+    contShare.classList.add('hidden');
+  } else {
+    contDesign.classList.add('hidden');
+  }
+};
+
+const handlerFill = () => {
+  if (contFill.classList.contains('hidden')) {
+    contFill.classList.remove('hidden');
+    contDesign.classList.add('hidden');
+    contShare.classList.add('hidden');
+  } else {
+    contFill.classList.add('hidden');
+  }
+};
+
+const handlerShare = () => {
+  if (contShare.classList.contains('hidden')) {
+    contShare.classList.remove('hidden');
+    contDesign.classList.add('hidden');
+    contFill.classList.add('hidden');
+  } else {
+    contShare.classList.add('hidden');
+  }};
+open[0].addEventListener('click', handlerDesign);
+open[1].addEventListener('click', handlerFill);
+open[2].addEventListener('click', handlerShare);
+
+
 //Sustituir nombre y profesión
 const job = document.querySelector('#job');
 const name = document.querySelector('#fullName');
@@ -53,6 +103,7 @@ const skillsTags = document.querySelectorAll('.card__skills-item');
 function applyPalette(e) {
   const p = parseInt(e.currentTarget.value);
   console.log('>', p);
+  dataJason.palette = p;
 
   if (p === 1) {
     /* En el caso del cardData, lo estamos manejando como un objeto HTML.
@@ -111,6 +162,8 @@ for (const c of colors) {
 const inputRadio = document.querySelectorAll('.typo__radio');
 function applyTypo(e) {
   const q = parseInt(e.currentTarget.value);
+  dataJason.typography = q;
+
 
   if (q === 1) {
     // typo por defecto
@@ -135,12 +188,9 @@ for (const t of inputRadio) {
   t.addEventListener('click', applyTypo);
 }
 
+//LISTA SKILLS
 
-
-// lista de objetos que aparecen y desaparecen cuadno los selecciono en fill.card
-// const skillsTags = document.querySelectorAll('.card__skills-item'); que ya esta definido arriba para los tres.
-
-const skillsCheckList = document.querySelectorAll('.skills__checkbox');
+const checkList = document.querySelectorAll('.skills__checkbox');
 
 const skillCheck = (e) => {
   const b = e.currentTarget;
@@ -162,9 +212,9 @@ const skillCheck = (e) => {
   }
 };
 
-// for (const check of skillsCheckList) {
-  // check.addEventListener('click', skillCheck);
-// }
+for (const check of checkList) {
+  check.addEventListener('click', skillCheck);
+}
 
 // DATOS: MAIL, TELEFONO, LINKEDIN, GITHUB
 // ya definido arriba const contactIcons = document.querySelectorAll('.contact-icons');
@@ -184,19 +234,19 @@ function fillEmail(e) {
 email.addEventListener('input', fillEmail);
 
 
-const phone = document.getElementById('phone__number');
+const phoneNumber = document.getElementById('phone__number');
 function fillPhone(e) {
   const phoneField = e.currentTarget;
   dataJason.phone = phoneField.value;
-  if (phone.value.length !== 0) {
+  if (phoneNumber.value.length !== 0) {
     contactIcons[0].classList.remove('hidden');
-    phone.value = phoneField.value;
+    phoneNumber.value = phoneField.value;
   } else {
     contactIcons[0].classList.add('hidden');
     console.log('este campo esta vacio');
   }
 }
-phone.addEventListener('input', fillPhone);
+phoneNumber.addEventListener('input', fillPhone);
 
 
 const linkedin = document.getElementById('linkedin__net');
@@ -241,6 +291,8 @@ function getImage(e) {
   const myFile = e.currentTarget.files[0];
   fr.addEventListener('load', writeImage);
   fr.readAsDataURL(myFile);
+  dataJason.photo = myFile;
+
 }
 
 function writeImage() {
