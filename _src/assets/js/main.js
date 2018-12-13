@@ -332,10 +332,8 @@ function askForSkills() {
         console.log(isChecked);
         if (isChecked === true) {
           paintSkillsContainer.innerHTML += `<li class="card__skills-item card__skills-item__color1">${paco.name}</li>`;
-          paintSkillsContainer.appenChild.classList.remove ('hidden');
-
-        } else{
-          paintSkillsContainer.appenChild.classList.add ('hidden');
+        } else if (isChecked === false) {
+          paintSkillsContainer.remove(`<li class="card__skills-item card__skills-item__color1">${paco.name}</li>`);
         }
 
       }
