@@ -4,6 +4,10 @@ fieldset {
     margin: 0;
 }
 
+.bar__menu-card {
+  cursor: pointer;
+}
+
 .container__radio-input {
     display: flex;
     justify-content: flex-end;
