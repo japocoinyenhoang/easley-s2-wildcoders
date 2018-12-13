@@ -340,3 +340,48 @@ fileField.addEventListener('change', getImage);
 uploadBtn.addEventListener('click', fakeFileClick);
 
 
+//Hacer la petición de las Skills
+let apiSkills;
+const skillsForm = document.querySelector('.form__skills-datacheckbox');
+
+function askForSkills() {
+  fetch('https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json')
+    .then(apiSkillsResponse => apiSkillsResponse.json())
+    .then(apiSkillsData => {
+      //Hay que declarar la variable como array (vacío) y no con comillas simples porque si no devuelve una cadena.
+      let emptySkills = [];
+      //Declaras una nueva variable para definir la longitud del array
+      const skillsLength = apiSkillsData.skills.length;
+      //Haces un bucle para recorrer la información recibida. Si en vez de skillsLength pones  apiSkillsData.skills.length no funciona, por eso hemos declarado previamente una variable
+      for (let i = 0; i < skillsLength; i++) {
+        //Push sirve para meter dentro del array vació los elementos del array que hemos recibido
+        emptySkills.push(apiSkillsData.skills[i]);
+        skillsForm.innerHTML += `<div class="form__skills">
+     <label for="skills-data">
+            <input id="skills-data1" class="skills__checkbox" type="checkbox" value="${[i]}">
+            ${emptySkills[i]}
+        </label>
+      </div>`;
+      }
+      console.log(emptySkills);
+      checkBoxLimit();
+    });
+}
+
+function checkBoxLimit() {
+  const checkBoxGroup = document.querySelectorAll('.skills__checkbox');
+  const limit = 3;
+  for (let i = 0; i < checkBoxGroup.length; i++) {
+    checkBoxGroup[i].onclick = function () {
+      let checkedcount = 0;
+      for (let i = 0; i < checkBoxGroup.length; i++) {
+        checkedcount += (checkBoxGroup[i].checked) ? 1 : 0;
+      }
+      if (checkedcount > limit) {
+        alert("Elige un máximo de " + limit + " habilidades.");
+        this.checked = false;
+      }
+    }
+  }
+}
+askForSkills();
