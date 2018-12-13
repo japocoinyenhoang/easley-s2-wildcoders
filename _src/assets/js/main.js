@@ -337,6 +337,9 @@ function askForSkills() {
 }
 
 function checkBoxLimit() {
+  function popUp() {
+    window.open('popup.html', 'Habilidades', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=1,width=500,height=200,left = 390,top = 50');
+  }
   const checkBoxGroup = document.querySelectorAll('.skills__checkbox');
   const limit = 3;
   for (let i = 0; i < checkBoxGroup.length; i++) {
@@ -346,10 +349,16 @@ function checkBoxLimit() {
         checkedcount += (checkBoxGroup[i].checked) ? 1 : 0;
       }
       if (checkedcount > limit) {
-        alert("Elige un máximo de " + limit + " habilidades.");
+        // alert("Elige un máximo de " + limit + " habilidades.");
+        popUp();
         this.checked = false;
       }
     }
   }
 }
+
 askForSkills();
+
+
+
+
