@@ -188,33 +188,6 @@ for (const t of inputRadio) {
   t.addEventListener('click', applyTypo);
 }
 
-//LISTA SKILLS
-
-const checkList = document.querySelectorAll('.skills__checkbox');
-
-const skillCheck = (e) => {
-  const b = e.currentTarget;
-  const numberValue = parseInt(b.value);
-  const isChecked = b.checked;
-
-  if (isChecked && numberValue === 1) {
-    skillsTags[0].classList.remove('hidden');
-  } else if (isChecked && numberValue === 2) {
-    skillsTags[1].classList.remove('hidden');
-  } else if (isChecked && numberValue === 3) {
-    skillsTags[2].classList.remove('hidden');
-  } else if (!isChecked && numberValue === 1) {
-    skillsTags[0].classList.add('hidden');
-  } else if (!isChecked && numberValue === 2) {
-    skillsTags[1].classList.add('hidden');
-  } else {
-    skillsTags[2].classList.add('hidden');
-  }
-};
-
-for (const check of checkList) {
-  check.addEventListener('click', skillCheck);
-}
 
 // DATOS: MAIL, TELEFONO, LINKEDIN, GITHUB
 // ya definido arriba const contactIcons = document.querySelectorAll('.contact-icons');
@@ -333,8 +306,57 @@ function askForSkills() {
       }
       console.log(emptySkills);
       checkBoxLimit();
+
+      const checkList = document.querySelector('.skills__checkbox');
+      const paintSkillsContainer= document.querySelector('.card__skills');
+      const nonCheckSkills=checkList.checked;
+      console.log (nonCheckSkills);
+      const skillCheck = (e) => {
+        const b = e.currentTarget;
+        const isChecked = b.checked;
+        console.log(isChecked);
+        if (isChecked===true){
+          paintSkillsContainer.innerHTML=`<li id="skill__1" class="card__skills-item card__skills-item__color1">html</li>`;
+        }
+      }
+      checkList.addEventListener('click', skillCheck);
+
+
+
     });
+
 }
+
+
+//LISTA SKILLS
+
+
+
+// const skillCheck = (e) => {
+//   const b = e.currentTarget;
+//   const numberValue = parseInt(b.value);
+//   const isChecked = b.checked;
+
+//   if (isChecked && numberValue === 1) {
+//     skillsTags[0].classList.remove('hidden');
+//   } else if (isChecked && numberValue === 2) {
+//     skillsTags[1].classList.remove('hidden');
+//   } else if (isChecked && numberValue === 3) {
+//     skillsTags[2].classList.remove('hidden');
+//   } else if (!isChecked && numberValue === 1) {
+//     skillsTags[0].classList.add('hidden');
+//   } else if (!isChecked && numberValue === 2) {
+//     skillsTags[1].classList.add('hidden');
+//   } else {
+//     skillsTags[2].classList.add('hidden');
+//   }
+// };
+
+// for (const check of checkList) {
+//   check.addEventListener('click', skillCheck);
+// }
+
+
 
 function checkBoxLimit() {
   const checkBoxGroup = document.querySelectorAll('.skills__checkbox');
