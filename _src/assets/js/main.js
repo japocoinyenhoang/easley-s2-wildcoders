@@ -57,15 +57,15 @@ const cardJob = document.querySelector('.card__data-job');
 const cardName = document.querySelector('.card__data-name');
 
 const dataJason = {
+  "palette": 0,
+  "typography": 0,
   "name": "",
   "job": "",
-  "photo": "",
-  "palette": "",
-  "typography": "",
-  "email": "",
   "phone": "",
+  "email": "",
   "linkedin": "",
   "github": "",
+  "photo": "",
   "skills": ["", "", ""]
 };
 
@@ -81,7 +81,7 @@ function sendCard() {
   })
     .then(urlResponse => urlResponse.json())
     .then(url => {
-      console.log(url);
+      console.log(url.cardURL);
       // twitterDiv.innerHTML = `<a href="${url.cardURL}" target="_blank">${url.cardURL}</a>`;
 
       // twitter.href = `https://twitter.com/home?status=${url.cardURL}`;
@@ -101,9 +101,6 @@ cardCreator.addEventListener('click', sendCard);
 
 //Envías datos a la API
 //y devuelves la URL de la API
-
-
-console.log(dataJason);
 
 function fillName(event) {
   const nameField = event.currentTarget;
