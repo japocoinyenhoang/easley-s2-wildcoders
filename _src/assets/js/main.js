@@ -69,6 +69,39 @@ const dataJason = {
   "skills": ["", "", ""]
 };
 
+const twitterDiv = document.querySelector('.share__twitter');
+const cardCreator = document.querySelector('.btn__create-card');
+function sendCard() {
+  fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
+    method: 'POST',
+    body: JSON.stringify(dataJason),
+    headers: {
+      'content-type': 'application/json'
+    },
+  })
+    .then(urlResponse => urlResponse.json())
+    .then(url => {
+      console.log(url);
+      // twitterDiv.innerHTML = `<a href="${url.cardURL}" target="_blank">${url.cardURL}</a>`;
+
+      // twitter.href = `https://twitter.com/home?status=${url.cardURL}`;
+    });
+}
+
+//Twitter share button
+
+//Cuando pulse en crear tarjeta
+// function createCard(){
+//   //Le añades una clase que hay que crear a la tarjeta para que no sea naranja
+//   cardCreator.classList.add('btn__create-card--done');
+//   //Le quitas la clase twitter_ hidden a twitterDiv
+//   twitterDiv.classList.remove('twitter__hidden');
+// }
+cardCreator.addEventListener('click', sendCard);
+
+//Envías datos a la API
+//y devuelves la URL de la API
+
 
 console.log(dataJason);
 
@@ -292,7 +325,6 @@ function getImage(e) {
   fr.addEventListener('load', writeImage);
   fr.readAsDataURL(myFile);
   dataJason.photo = myFile;
-
 }
 
 function writeImage() {
@@ -306,4 +338,5 @@ function fakeFileClick() {
 
 fileField.addEventListener('change', getImage);
 uploadBtn.addEventListener('click', fakeFileClick);
+
 
