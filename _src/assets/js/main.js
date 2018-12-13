@@ -44,7 +44,8 @@ const handlerShare = () => {
     contFill.classList.add('hidden');
   } else {
     contShare.classList.add('hidden');
-  }};
+  }
+};
 open[0].addEventListener('click', handlerDesign);
 open[1].addEventListener('click', handlerFill);
 open[2].addEventListener('click', handlerShare);
@@ -299,63 +300,55 @@ function askForSkills() {
         emptySkills.push(apiSkillsData.skills[i]);
         skillsForm.innerHTML += `<div class="form__skills">
      <label for="skills-data">
-            <input id="skills-data1" class="skills__checkbox" type="checkbox" value="${[i]}">
+            <input id="skills-data1" class="skills__checkbox" type="checkbox" value="${[i]}" name="${emptySkills[i]}">
             ${emptySkills[i]}
         </label>
       </div>`;
       }
       console.log(emptySkills);
       checkBoxLimit();
+      //FUNCIONA CON UNO
+      // const checkList = document.querySelector('.skills__checkbox');
+      // const paintSkillsContainer= document.querySelector('.card__skills');
+      // const nonCheckSkills=checkList.checked;
+      // console.log (nonCheckSkills);
+      // const skillCheck = (e) => {
+      //   const b = e.currentTarget;
+      //   const isChecked = b.checked;
+      //   console.log(isChecked);
+      //   if (isChecked===true){
+      //     paintSkillsContainer.innerHTML=`<li id="skill__1" class="card__skills-item card__skills-item__color1">html</li>`;
+      //   }
+      // }
+      // checkList.addEventListener('click', skillCheck);
 
-      const checkList = document.querySelector('.skills__checkbox');
-      const paintSkillsContainer= document.querySelector('.card__skills');
-      const nonCheckSkills=checkList.checked;
-      console.log (nonCheckSkills);
+      // PROBANDO CON TODOS
+      const checkList = document.querySelectorAll('.skills__checkbox');
+      const paintSkillsContainer = document.querySelector('.card__skills');
+
       const skillCheck = (e) => {
-        const b = e.currentTarget;
-        const isChecked = b.checked;
+        const paco = e.currentTarget;
+        const isChecked = paco.checked;
         console.log(isChecked);
-        if (isChecked===true){
-          paintSkillsContainer.innerHTML=`<li id="skill__1" class="card__skills-item card__skills-item__color1">html</li>`;
+        if (isChecked === true) {
+          paintSkillsContainer.innerHTML += `<li class="card__skills-item card__skills-item__color1">${paco.name}</li>`;
+          paintSkillsContainer.appenChild.classList.remove ('hidden');
+
+        } else{
+          paintSkillsContainer.appenChild.classList.add ('hidden');
         }
+
       }
-      checkList.addEventListener('click', skillCheck);
-
-
+      for (const check of checkList) {
+        check.addEventListener('click', skillCheck);
+      }
+      // for(let i=0; i<checkList[i].length;i++){
+      //   console.log(checkList[i]);
+      //   }
 
     });
 
 }
-
-
-//LISTA SKILLS
-
-
-
-// const skillCheck = (e) => {
-//   const b = e.currentTarget;
-//   const numberValue = parseInt(b.value);
-//   const isChecked = b.checked;
-
-//   if (isChecked && numberValue === 1) {
-//     skillsTags[0].classList.remove('hidden');
-//   } else if (isChecked && numberValue === 2) {
-//     skillsTags[1].classList.remove('hidden');
-//   } else if (isChecked && numberValue === 3) {
-//     skillsTags[2].classList.remove('hidden');
-//   } else if (!isChecked && numberValue === 1) {
-//     skillsTags[0].classList.add('hidden');
-//   } else if (!isChecked && numberValue === 2) {
-//     skillsTags[1].classList.add('hidden');
-//   } else {
-//     skillsTags[2].classList.add('hidden');
-//   }
-// };
-
-// for (const check of checkList) {
-//   check.addEventListener('click', skillCheck);
-// }
-
 
 
 function checkBoxLimit() {
