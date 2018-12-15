@@ -17,7 +17,11 @@
 	},
 	"js": {
 		"src": [
-			"_src/assets/js/main.js"
+      "_src/assets/js/main.js",
+      "_src/assets/js/collapsables.js",
+      "_src/assets/js/addIcons.js",
+			"_src/assets/js/skills.js"
+
 		],
 		"dest": "public/assets/js/",
     "dist": "docs/assets/js/"
