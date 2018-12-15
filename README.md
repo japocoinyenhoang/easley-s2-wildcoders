@@ -1,6 +1,8 @@
 Proyecto de Sprint2 - AWESOME PROFILE -CARD
+
 Realizado por: WildCoders (Promoción Easley)
 https://github.com/Adalab/easley-s2-wildcoders.git
+
 
 El proyecto consta de 2 páginas:    una página de bienvenida
                                     una página con la aplicación de crear tarjetas
@@ -77,7 +79,7 @@ Siguiendo los principios de las metodologías ágiles se nos han establecido peq
 
     Segundo.Primera versión simple de la web
             3 sesiones de trabajo
-             
+
             Desarrollar una primera versión básica de la web, con la maquetación de la estructura básica (para desktop y móvil) que incluye el formulario con los colapsables y la vista previa
             Funcionalidad básica: al modificar un campo del formulario, se actualiza la vista previa
     NOTA:   Para considerar terminado este hito y todos los siguientes debéis tener publicada la web en GitHub Pages.
@@ -137,7 +139,7 @@ La URL base del servicio es https://us-central1-awesome-cards-cf6f0.cloudfunctio
 El API sigue una convención tipo REST para la gestión de tarjetas: creación y acceso a las mismas. Las acciones implementadas por este API son las siguientes:
 
 
-CREATE: una petición 'POST' a la URL /card con los datos necesarios en formato JSON (especificados más abajo) creará una nueva tarjeta 
+CREATE: una petición 'POST' a la URL /card con los datos necesarios en formato JSON (especificados más abajo) creará una nueva tarjeta
 
 GET: una petición 'GET' a la URL /card/:id:/ devueleve una página web en HTML donde se muestran los datos de la tarjeta con el identificador 'id'
 
@@ -172,7 +174,7 @@ Email   Nombre del campo: email
 
 LinkedIn    Nombre del campo: linkedin
             Descripción: nombre de usuario de LinkedIn
-            Ejemplo: mariagar   
+            Ejemplo: mariagar
 
 GitHub  Nombre del campo: github
         Descripción: nombre de usuario de GitHub
@@ -213,5 +215,8 @@ Si hay algún error, la respuesta tiene esta pinta:
     "success": false,
     "error": "Error description"
     }
+
+Muchas gracias por haber leido hasta aqui, y esperamos que te guste nuestro proyecto.
+Si tienes alguna sugerencia para mejorar el proyecto, no dudes en ponerte en contacto con nosotras.
 
 
