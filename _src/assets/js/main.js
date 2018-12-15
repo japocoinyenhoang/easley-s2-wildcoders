@@ -302,11 +302,44 @@ function askForSkills() {
      <label for="skills-data">
             <input id="skills-data1" class="skills__checkbox" type="checkbox" value="${[i]}" name="${emptySkills[i]}">
             ${emptySkills[i]}
-        </label>
-      </div>`;
+        </label></div>
+      `;
       }
-      console.log(emptySkills);
-      checkBoxLimit();
+
+
+      // LIMITAR A 3 MAXIMO
+      const checkList = document.querySelectorAll('.skills__checkbox');
+      const paintSkillsContainer = document.querySelector('.card__skills');
+
+      function checkBoxLimit() {
+        // creo un contador para que me cuente los checks y lo pongo a cero
+        let count = 0;
+        // para la lista que me cree, cuadno se chequee, que me vaya sumando.
+        for (let i = 0; i < checkList.length; i++) {
+          if (checkList[i].checked) {
+            count += 1;
+          }
+        }
+        // si selecionas 3 o mas de tres,
+        if (count >= 3) {
+          for (let i = 0; i < checkList.length; i++) {
+            //! devuelve el valor contrario al valor dado.
+            // no me dejes clickear más = deja que el resto este sin uso.
+            if (!checkList[i].checked) {
+              checkList[i].disabled = true;
+            }
+          }
+
+        } else {
+          for (let i = 0; i < checkList.length; i++) {
+
+            if (!checkList[i].checked) {
+              checkList[i].disabled= false;
+
+            }
+          }
+        }
+      }
       //FUNCIONA CON UNO
       // const checkList = document.querySelector('.skills__checkbox');
       // const paintSkillsContainer= document.querySelector('.card__skills');
@@ -322,47 +355,71 @@ function askForSkills() {
       // }
       // checkList.addEventListener('click', skillCheck);
 
-      // PROBANDO CON TODOS
-      const checkList = document.querySelectorAll('.skills__checkbox');
-      const paintSkillsContainer = document.querySelector('.card__skills');
 
-      const skillCheck = (e) => {
-        const paco = e.currentTarget;
-        const isChecked = paco.checked;
-        console.log(isChecked);
-        if (isChecked === true) {
-          paintSkillsContainer.innerHTML += `<li class="card__skills-item card__skills-item__color1">${paco.name}</li>`;
-        } else if (isChecked === false) {
-          paintSkillsContainer.remove(`<li class="card__skills-item card__skills-item__color1">${paco.name}</li>`);
+
+      function skillCheck(event) {
+        let skillList = "";
+        for (const forCheck of checkList) {
+          if (forCheck.checked === true) {
+            skillList = skillList + `<li class="card__skills-item card__skills-item__color1">${forCheck.name}</li>`;
+          }
         }
 
+        checkBoxLimit();
+
+        paintSkillsContainer.innerHTML = skillList;
+
+
+        // for (const check of checkList) {
+        //   check.addEventListener('click', skillCheck);
+        // }
       }
-      for (const check of checkList) {
-        check.addEventListener('click', skillCheck);
-      }
-      // for(let i=0; i<checkList[i].length;i++){
-      //   console.log(checkList[i]);
-      //   }
+        for (let i = 0; i < checkList.length; i++) {
+          checkList[i].addEventListener('click', skillCheck);
+        }
+
 
     });
 
 }
 
-
-function checkBoxLimit() {
-  const checkBoxGroup = document.querySelectorAll('.skills__checkbox');
-  const limit = 3;
-  for (let i = 0; i < checkBoxGroup.length; i++) {
-    checkBoxGroup[i].onclick = function () {
-      let checkedcount = 0;
-      for (let i = 0; i < checkBoxGroup.length; i++) {
-        checkedcount += (checkBoxGroup[i].checked) ? 1 : 0;
-      }
-      if (checkedcount > limit) {
-        alert("Elige un máximo de " + limit + " habilidades.");
-        this.checked = false;
-      }
-    }
-  }
-}
 askForSkills();
+
+
+      // const skillCheck = (e) => {
+      //   const paco = e.currentTarget;
+      //   const isChecked = paco.checked;
+      //   console.log(isChecked);
+      // if (isChecked === true) {
+      //   paintSkillsContainer.innerHTML += `<li class="card__skills-item card__skills-item__color1">${paco.name}</li>`;
+      // } else if (isChecked === false) {
+      //   paintSkillsContainer.remove(`<li class="card__skills-item card__skills-item__color1">${paco.name}</li>`);
+      // }
+
+
+      // for (const check of checkList) {
+      //   check.addEventListener('click', skillCheck);
+      // }
+      // for(let i=0; i<checkList[i].length;i++){
+      //   console.log(checkList[i]);
+      //   }
+
+
+
+
+// function checkBoxLimit() {
+//   const checkBoxGroup = document.querySelectorAll('.skills__checkbox');
+//   const limit = 3;
+//   for (let i = 0; i < checkBoxGroup.length; i++) {
+//     checkBoxGroup[i].onclick = function () {
+//       let checkedcount = 0;
+//       for (let i = 0; i < checkBoxGroup.length; i++) {
+//         checkedcount += (checkBoxGroup[i].checked) ? 1 : 0;
+//       }
+//       if (checkedcount > limit) {
+//         alert("Elige un máximo de " + limit + " habilidades.");
+//         this.checked = false;
+//       }
+//     }
+//   }
+// }
