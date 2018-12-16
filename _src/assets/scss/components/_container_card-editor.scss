@@ -5,6 +5,7 @@
     grid-template-areas: "a b";
     background-image: linear-gradient(to bottom, $white-three, $white);
     border-bottom: 1px solid $white-two;
+    grid-gap: 30px;
   }
 }
 
@@ -18,14 +19,9 @@
   @media all and (min-width: 768px) {
     grid-area: b;
     height: 812px;
-    width: 329px;
     border-radius: 6px;
-    margin: 23px 40px 21px auto;
+    margin: 23px 40px 21px 0;
     justify-content: center;
-  }
-
-  @media all and (min-width:1024px) {
-    width: 585px;
   }
 }
 

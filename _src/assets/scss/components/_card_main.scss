@@ -35,3 +35,8 @@ fieldset {
     position: absolute;
     right: 0;
 }
+
+//añadir clase al icono de la flecha cuando se clickea en ella
+.ico__arrow--reverse{
+    transform: rotate(180deg);
+}
