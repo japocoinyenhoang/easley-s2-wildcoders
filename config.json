@@ -17,7 +17,7 @@
 	},
 	"js": {
 		"src": [
-      "_src/assets/js/main.js",
+      "_src/assets/js/resetButton.js",
       "_src/assets/js/collapsables.js",
       "_src/assets/js/colorsPallettes.js",
       "_src/assets/js/typography.js",
