@@ -48,10 +48,18 @@ const resetJason = () => {
   }
 
   //Lista de Tags
-  for (const tag of skillsTags) {
+  /* for (const tag of skillsTags) {
     tag.classList.add('card__skills-item__color1');
     tag.classList.remove('card__skills-item__color2', 'card__skills-item__color3');
+  } */
+  paintSkillsContainer.innerHTML = '<li class="card__skills-item card__skills-item__color1  opacity">html</li><li class="card__skills-item card__skills-item__color1  opacity">css</li><li class="card__skills-item card__skills-item__color1  opacity">gulp</li>';
+
+  const checkList = document.querySelectorAll('.skills__checkbox');
+
+  for (let i = 0; i < checkList.length; i++) {
+    checkList[i].checked= false;
   }
+
 
   colors[0].checked = true;
 
