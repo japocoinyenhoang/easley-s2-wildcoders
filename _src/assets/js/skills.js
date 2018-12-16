@@ -1,7 +1,9 @@
 'use strict';
 //Hacer la petición de las Skills
 let apiSkills;
+
 const skillsForm = document.querySelector('.form__skills-datacheckbox');
+const paintSkillsContainer = document.querySelector('.card__skills');
 
 function askForSkills() {
   fetch('https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json')
@@ -16,18 +18,16 @@ function askForSkills() {
         //Push sirve para meter dentro del array vació los elementos del array que hemos recibido
         emptySkills.push(apiSkillsData.skills[i]);
         skillsForm.innerHTML += `<div class="form__skills">
-     <label for="skills-data">
+        <label for="skills-data">
             <input id="skills-data1" class="skills__checkbox" type="checkbox" value="${[i]}" name="${emptySkills[i]}">
             ${emptySkills[i]}
         </label></div>
-      `;
+        `;
       }
 
+      const checkList = document.querySelectorAll('.skills__checkbox');
 
       // LIMITAR A 3 MAXIMO
-      const checkList = document.querySelectorAll('.skills__checkbox');
-      const paintSkillsContainer = document.querySelector('.card__skills');
-
       function checkBoxLimit() {
         // creo un contador para que me cuente los checks y lo pongo a cero
         let count = 0;
@@ -49,7 +49,6 @@ function askForSkills() {
 
         } else {
           for (let i = 0; i < checkList.length; i++) {
-
             if (!checkList[i].checked) {
               checkList[i].disabled= false;
 
@@ -57,6 +56,7 @@ function askForSkills() {
           }
         }
       }
+
       //FUNCIONA CON UNO
       // const checkList = document.querySelector('.skills__checkbox');
       // const paintSkillsContainer= document.querySelector('.card__skills');
@@ -72,30 +72,51 @@ function askForSkills() {
       // }
       // checkList.addEventListener('click', skillCheck);
 
-
-
-      function skillCheck(event) {
-        let skillList = "";
-        for (const forCheck of checkList) {
-          if (forCheck.checked === true) {
-            skillList = skillList + `<li class="card__skills-item card__skills-item__color1">${forCheck.name}</li>`;
+      function skillCheck() {
+        // Primero sacamos el valor checkeado de colors para luego aplicar el estilo correspondiente
+        let p = '';
+        for (const c of colors) {
+          if (c.checked === true) {
+            p = parseInt(c.value);
           }
         }
+        // Recorremos las skills para crearlas con el estilo y texto correpondiente y manejamos el array que gusrdaremos en el JSON
+        let skillsTags = '';
+        let arraySkills = [];
+
+        for (const forCheck of checkList) {
+          if (forCheck.checked === true) {
+            // Gestionamos el color a través de los estilos
+            let cardItemcolor = '';
+            if (p === 3) {
+              cardItemcolor = 'card__skills-item__color3';
+            } else if (p === 2) {
+              cardItemcolor = 'card__skills-item__color2';
+            } else {
+              cardItemcolor = 'card__skills-item__color1';
+            }
+            // Creamos/Añadimos elementos
+            skillsTags += `<li class="card__skills-item ${cardItemcolor}">${forCheck.name}</li>`;
+
+            //Añadimos elementos al array de valores checkeados para guardarlo posteriormente en el JSON
+            arraySkills.push(forCheck.name);
+          }
+        }
+        //Guardamos el array de skills generados al JSON
+        dataJason.skills = arraySkills;
 
         checkBoxLimit();
 
-        paintSkillsContainer.innerHTML = skillList;
-
+        paintSkillsContainer.innerHTML = skillsTags;
 
         // for (const check of checkList) {
         //   check.addEventListener('click', skillCheck);
         // }
       }
-        for (let i = 0; i < checkList.length; i++) {
-          checkList[i].addEventListener('click', skillCheck);
-        }
 
-
+      for (let i = 0; i < checkList.length; i++) {
+        checkList[i].addEventListener('click', skillCheck);
+      }
     });
 
 }
@@ -103,26 +124,22 @@ function askForSkills() {
 askForSkills();
 
 
-      // const skillCheck = (e) => {
-      //   const paco = e.currentTarget;
-      //   const isChecked = paco.checked;
-      //   console.log(isChecked);
-      // if (isChecked === true) {
-      //   paintSkillsContainer.innerHTML += `<li class="card__skills-item card__skills-item__color1">${paco.name}</li>`;
-      // } else if (isChecked === false) {
-      //   paintSkillsContainer.remove(`<li class="card__skills-item card__skills-item__color1">${paco.name}</li>`);
-      // }
+// const skillCheck = (e) => {
+//   const paco = e.currentTarget;
+//   const isChecked = paco.checked;
+//   console.log(isChecked);
+// if (isChecked === true) {
+//   paintSkillsContainer.innerHTML += `<li class="card__skills-item card__skills-item__color1">${paco.name}</li>`;
+// } else if (isChecked === false) {
+//   paintSkillsContainer.remove(`<li class="card__skills-item card__skills-item__color1">${paco.name}</li>`);
+// }
 
-
-      // for (const check of checkList) {
-      //   check.addEventListener('click', skillCheck);
-      // }
-      // for(let i=0; i<checkList[i].length;i++){
-      //   console.log(checkList[i]);
-      //   }
-
-
-
+// for (const check of checkList) {
+//   check.addEventListener('click', skillCheck);
+// }
+// for(let i=0; i<checkList[i].length;i++){
+//   console.log(checkList[i]);
+//   }
 
 // function checkBoxLimit() {
 //   const checkBoxGroup = document.querySelectorAll('.skills__checkbox');

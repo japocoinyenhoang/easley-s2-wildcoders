@@ -7,10 +7,11 @@ const cardData = document.querySelector('.card__data');
 
 //Listas de objetos HTML que cambian de color
 const contactIcons = document.querySelectorAll('.contact-icons');
-const skillsTags = document.querySelectorAll('.card__skills-item');
 
 function applyPalette(e) {
   const p = parseInt(e.currentTarget.value);
+  const skillsTags = document.querySelectorAll('.card__skills-item');
+
   console.log('>', p);
   dataJason.palette = p;
 

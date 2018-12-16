@@ -17,15 +17,14 @@
 	},
 	"js": {
 		"src": [
-      "_src/assets/js/main.js",
       "_src/assets/js/collapsables.js",
       "_src/assets/js/colorsPallettes.js",
       "_src/assets/js/typography.js",
       "_src/assets/js/nameJob.js",
       "_src/assets/js/addImage.js",
       "_src/assets/js/addIcons.js",
-			"_src/assets/js/skills.js"
-
+      "_src/assets/js/skills.js",
+      "_src/assets/js/resetButton.js"
 		],
 		"dest": "public/assets/js/",
     "dist": "docs/assets/js/"
