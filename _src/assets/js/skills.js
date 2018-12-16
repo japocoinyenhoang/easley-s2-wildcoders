@@ -1,8 +1,8 @@
 'use strict';
 //Hacer la petición de las Skills
 let apiSkills;
-const skillsForm = document.querySelector('.form__skills-datacheckbox');
 
+const skillsForm = document.querySelector('.form__skills-datacheckbox');
 const paintSkillsContainer = document.querySelector('.card__skills');
 
 function askForSkills() {
@@ -73,17 +73,33 @@ function askForSkills() {
       // checkList.addEventListener('click', skillCheck);
 
       function skillCheck() {
+        // Sacamos el valor checkeado de colors para luego aplicar el style correspondiente
+        let p = '';
+        for (const c of colors) {
+          if (c.checked === true) {
+            p = parseInt(c.value);
+          }
+        }
+        // Recorremos las skills y modificamos el estilo segun correponda
         let skillsTags = '';
         for (const forCheck of checkList) {
           if (forCheck.checked === true) {
-            skillsTags = skillsTags + `<li class="card__skills-item card__skills-item__color1">${forCheck.name}</li>`;
+            let cardItemcolor = '';
+            if (p === 3) {
+              cardItemcolor = 'card__skills-item__color3';
+            } else if (p === 2) {
+              cardItemcolor = 'card__skills-item__color2';
+            } else {
+              cardItemcolor = 'card__skills-item__color1';
+            }
+
+            skillsTags = skillsTags + `<li class="card__skills-item ${cardItemcolor}">${forCheck.name}</li>`;
           }
         }
 
         checkBoxLimit();
 
         paintSkillsContainer.innerHTML = skillsTags;
-
 
         // for (const check of checkList) {
         //   check.addEventListener('click', skillCheck);

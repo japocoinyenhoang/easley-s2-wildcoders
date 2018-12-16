@@ -48,25 +48,22 @@ const resetJason = () => {
   }
 
   //Lista de Tags
-  /* for (const tag of skillsTags) {
-    tag.classList.add('card__skills-item__color1');
-    tag.classList.remove('card__skills-item__color2', 'card__skills-item__color3');
-  } */
   paintSkillsContainer.innerHTML = '<li class="card__skills-item card__skills-item__color1  opacity">html</li><li class="card__skills-item card__skills-item__color1  opacity">css</li><li class="card__skills-item card__skills-item__color1  opacity">gulp</li>';
 
+  // Lista de checks
   const checkList = document.querySelectorAll('.skills__checkbox');
-
   for (let i = 0; i < checkList.length; i++) {
     checkList[i].checked= false;
   }
 
-
+  // Lista de radios colores
   colors[0].checked = true;
 
   //Tipografía por defecto
   cardName.classList.remove('typo-2', 'typo-3');
   cardJob.classList.remove('typo-2', 'typo-3');
 
+  //Lista de radios typos
   inputRadio[0].checked = true;
 };
 
