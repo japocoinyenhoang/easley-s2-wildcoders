@@ -1,17 +1,30 @@
 'use strict';
-const dataJason = {
+
+let dataJason = {
   "name": "",
   "job": "",
   "photo": "",
-  "palette": "",
-  "typography": "",
+  "palette": 1,
+  "typography": 1,
   "email": "",
   "phone": "",
   "linkedin": "",
   "github": "",
   "skills": ["", "", ""]
 };
-'use strict';
+
+const dataDefault = {
+  "name": "",
+  "job": "",
+  "photo": "",
+  "palette": 1,
+  "typography": 1,
+  "email": "",
+  "phone": "",
+  "linkedin": "",
+  "github": "",
+  "skills": ["", "", ""]
+};
 
 const btnReset = document.querySelector('.btn__reset');
 
@@ -65,6 +78,9 @@ const resetJason = () => {
 
   //Lista de radios typos
   inputRadio[0].checked = true;
+
+  //Resetamos valores JSON
+  dataJason = dataDefault;
 };
 
 btnReset.addEventListener('click', resetJason);

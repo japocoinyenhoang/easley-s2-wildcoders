@@ -73,17 +73,20 @@ function askForSkills() {
       // checkList.addEventListener('click', skillCheck);
 
       function skillCheck() {
-        // Sacamos el valor checkeado de colors para luego aplicar el style correspondiente
+        // Primero sacamos el valor checkeado de colors para luego aplicar el estilo correspondiente
         let p = '';
         for (const c of colors) {
           if (c.checked === true) {
             p = parseInt(c.value);
           }
         }
-        // Recorremos las skills y modificamos el estilo segun correponda
+        // Recorremos las skills para crearlas con el estilo y texto correpondiente y manejamos el array que gusrdaremos en el JSON
         let skillsTags = '';
+        let arraySkills = [];
+
         for (const forCheck of checkList) {
           if (forCheck.checked === true) {
+            // Gestionamos el color a través de los estilos
             let cardItemcolor = '';
             if (p === 3) {
               cardItemcolor = 'card__skills-item__color3';
@@ -92,10 +95,15 @@ function askForSkills() {
             } else {
               cardItemcolor = 'card__skills-item__color1';
             }
+            // Creamos/Añadimos elementos
+            skillsTags += `<li class="card__skills-item ${cardItemcolor}">${forCheck.name}</li>`;
 
-            skillsTags = skillsTags + `<li class="card__skills-item ${cardItemcolor}">${forCheck.name}</li>`;
+            //Añadimos elementos al array de valores checkeados para guardarlo posteriormente en el JSON
+            arraySkills.push(forCheck.name);
           }
         }
+        //Guardamos el array de skills generados al JSON
+        dataJason.skills = arraySkills;
 
         checkBoxLimit();
 
