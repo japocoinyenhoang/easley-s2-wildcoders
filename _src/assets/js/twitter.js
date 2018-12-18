@@ -12,10 +12,13 @@ function sendCard() {
   })
     .then(urlResponse => urlResponse.json())
     .then(url => {
-      console.log(url.cardURL);
-      twitterDiv.innerHTML = `<a href="${url.cardURL}" target="_blank">${url.cardURL}</a>`;
-
-      twitter.href = `https://twitter.com/intent/tweet?text=Puedes%ver%tu%tarjeta%aquí%${url.cardURL}`;
+      // twitterDiv.innerHTML = `<a href="${url.cardURL}" target="_blank">${url.cardURL}</a>`;
+      const twitterUrl = document.createElement('div');
+      const urlResult = document.createTextNode(`${url.cardURL}`);
+      twitterUrl.className = 'twitter__card--url';
+      twitterUrl.appendChild(urlResult);
+      twitterDiv.appendChild(twitterUrl);
+      twitter.href = `https://twitter.com/intent/tweet?text=Esta%20es%20mi%20tarjeta%3A&hashtags=adalab%20${url.cardURL}`;
     });
   createCard();
 }
