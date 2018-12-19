@@ -11,13 +11,12 @@ function getImage(e) {
   const myFile = e.currentTarget.files[0];
   fr.addEventListener('load', writeImage);
   fr.readAsDataURL(myFile);
-  dataJason.photo = myFile;
-
 }
 
 function writeImage() {
   profileImage.style.backgroundImage = `url(${fr.result})`;
   divPreviewImage.style.backgroundImage = `url(${fr.result})`;
+  dataJason.photo = fr.result;
 }
 
 function fakeFileClick() {

@@ -1,21 +1,74 @@
 .share_btn--container{
-    display:flex;
-    justify-content: center;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
 }
+
 .btn__create-card{
-    width: 199px;
-    height: 50px;
-    background-color: $color-primary;
-    box-shadow: 0 1px 6px 0 rgba(0,0,0,0.32);
-    border-radius: 12px;
-    text-transform: uppercase;
-    font-family: $font-text;
-    border: 0;
-    color: $white;
-    font-size: 18px;
-    margin-top: 30px;
+  width: 199px;
+  height: 50px;
+  background-color: $color-primary;
+  box-shadow: 0 1px 6px 0 rgba(0,0,0,0.32);
+  border-radius: 12px;
+  text-transform: uppercase;
+  font-family: $font-text;
+  border: 0;
+  color: $white;
+  font-size: 18px;
+  margin: 30px 0;
+  cursor: pointer;
+  outline: none;
 }
+
+.btn__create-card--done{
+  background-color: #d5d5d5;
+}
+
 .share__icon{
-    margin-right: 10px;
-    font-size: 22px;
+  margin-right: 10px;
+  font-size: 22px;
+}
+
+.twitter-share-button{
+  background-color: #00a0f5;
+  color: white;
+  height: 30px;
+  border-radius: 8px;
+  margin-top: 20px;
+  display: block;
+  width: 181px;
+  font-family: $font-text;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.share__title{
+  font-size: 18px;
+  color: #54585a;
+  font-family: $font-text;
+  font-weight: 600;
+  padding-top: 20px;
+}
+
+.share__twitter{
+  width: 390px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid #d8d8d8;
+}
+
+.twitter__hidden{
+  visibility: hidden;
+  height: 0;
+}
+
+.twitter__card--url{
+  text-align: center;
+}
+
+.twitter__text{
+  padding: 5px;
 }
