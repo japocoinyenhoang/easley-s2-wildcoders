@@ -24,7 +24,8 @@
       "_src/assets/js/addImage.js",
       "_src/assets/js/addIcons.js",
       "_src/assets/js/skills.js",
-      "_src/assets/js/resetButton.js"
+      "_src/assets/js/resetButton.js",
+      "_src/assets/js/localStorage.js"
 		],
 		"dest": "public/assets/js/",
     "dist": "docs/assets/js/"

@@ -7,14 +7,18 @@ const cardName = document.querySelector('.card__data-name');
 
 function fillName(event) {
   const nameField = event.currentTarget;
-
-  if (nameField.value !== '') {
+  dataJason.name = nameField.value;
+  myLocalStorage('name', nameField.value);
+  let savedName = localStorage.getItem('name');
+  if (savedName.includes(JSON.stringify(nameField.value))) {
+    cardName.innerHTML = savedName;
+  }
+  else if (nameField.value !== '') {
     cardName.innerHTML = nameField.value;
   } else {
     cardName.innerHTML = 'Nombre y Apellido';
   }
 
-  dataJason.name = nameField.value;
 }
 
 name.addEventListener('keyup', fillName);
@@ -27,8 +31,8 @@ function fillJob(event) {
   } else {
     cardJob.innerHTML = 'Front end Developer';
   }
-
   dataJason.job = jobField.value;
+  myLocalStorage('job', jobField.value);
 }
 
 job.addEventListener('keyup', fillJob);
