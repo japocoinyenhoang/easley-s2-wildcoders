@@ -1,10 +1,11 @@
 .page__main {
   @media all and (min-width: 768px) {
     display: grid;
-    grid-template-columns: 1fr 1frs;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: "a b";
     background-image: linear-gradient(to bottom, $white-three, $white);
     border-bottom: 1px solid $white-two;
+    grid-gap: 30px;
   }
 }
 
@@ -18,17 +19,11 @@
   @media all and (min-width: 768px) {
     grid-area: b;
     height: 812px;
-    width: 329px;
     border-radius: 6px;
-    margin: 23px 40px 21px auto;
+    margin: 23px 40px 21px 0;
     justify-content: center;
   }
-
-  @media all and (min-width:1024px) {
-    width: 585px;
-  }
 }
-
 
 .btn__bar {
   width: 240px;
@@ -45,8 +40,9 @@
   font-size: 12px;
   line-height: 20px;
   color: $gunmetal;
+  outline: none;
+  cursor: pointer;
 }
-
 
 .card__details {
   background-color: $white;
@@ -54,23 +50,20 @@
   width: 240px;
 }
 
-
 .ico__reset-img {
   display: inline-block;
   padding-right: 10px;
 }
 
-
 .ico__reset-text {
   display: inline-block;
   font-family: $font-text;
+  text-transform: uppercase;
 }
-
 
 .card__data {
   padding-left: 15px;
   margin: 20px auto 10px;
-  //Hay que cambiar este color
 }
 
 .card-data__color1 {
@@ -88,26 +81,20 @@
   border-left: solid 5px $light-grey-blue;
 }
 
-
 .card__data-name {
   margin-bottom: 5px;
-  font-family: $typo2;
   font-size: 18px;
   font-weight: bold;
   font-stretch: normal;
   line-height: 20px;
   text-transform: capitalize;
-  //Hay que cambiar este color
 }
 
-
 .card__data-job {
-  font-family: $typo2;
   font-size: 16px;
   line-height: 20px;
   color: $gunmetal;
 }
-
 
 .card__img {
   width: 240px;
@@ -116,7 +103,6 @@
   background-size: cover;
 }
 
-
 .card__contact {
   display: flex;
   list-style: none;
@@ -124,8 +110,8 @@
   margin: 0;
   padding: 10px 20px;
   border-bottom: 2px solid $dirty-blue20;
+  min-height: 32px;
 }
-
 
 .card__skills {
   display: flex;
@@ -134,10 +120,7 @@
   margin: 0;
 }
 
-
 .card__skills-item {
-  display: inline-flex;
-  list-style: none;
   font-family: $font-text;
   font-size: 13px;
   color: $white;
@@ -145,7 +128,6 @@
   padding: 0 5px;
   margin-right: 5px;
   border-radius: 4px;
-  //Hay que cambiar este color
 }
 
 .card__skills-item__color1 {
@@ -169,7 +151,6 @@
   justify-content: center;
   align-items: center;
   margin-right: 10px;
-  //Hay que cambiar este color
 }
 
 .contact-icons__color1 {
@@ -185,4 +166,12 @@
 .contact-icons__color3 {
   color: $slate;
   border: solid 2px $light-grey-blue;
+}
+
+.hidden {
+  display: none;
+}
+
+.opacity{
+  opacity: 0.3;
 }
