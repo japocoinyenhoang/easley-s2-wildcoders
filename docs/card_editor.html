@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Awesome profile pics</title>
+        <title>Crea tu tarjeta de visita</title>
         <link href="https://fonts.googleapis.com/css?family=Merriweather:900|Open+Sans:400,600"
         rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Gaegu:400,700" rel="stylesheet">
@@ -25,101 +25,125 @@
         <main class="page__main">
             <div class="container__card-editor">
                 <div class="btn__bar">
-                    <button class="btn__reset">
+                    <button class="btn__reset" type="button">
                         <div class="ico__reset-img"><i class="far fa-trash-alt"></i>
 
                         </div>
-                        <div class="ico__reset-text">RESET</div>
+                        <div class="ico__reset-text">Reset</div>
                     </button>
                 </div>
                 <div class="card__details">
-                    <div class="card__data">
-                        <div class="card__data-name">Nombre y Apellido</div>
-                        <div class="card__data-job">Front end Developer</div>
+                    <div class="card__data card-data__color1">
+                        <div class="card__data-name typo-1">Nombre y Apellido</div>
+                        <div class="card__data-job typo-1">Front end Developer</div>
                     </div>
                     <div class="card__img"></div>
                     <div class="list__card-contact">
                         <ul class="card__contact">
-                            <li class="contact-icons"><i class="fas fa-mobile-alt"></i>
+                            <li id="icon__phone" class="contact-icons contact-icons__color1 opacity"><i class="fas fa-mobile-alt"></i>
 
                             </li>
-                            <li class="contact-icons"><i class="far fa-envelope"></i>
+                            <li id="icon__email" class="contact-icons contact-icons__color1 opacity"><i class="far fa-envelope"></i>
 
                             </li>
-                            <li class="contact-icons"><i class="fab fa-linkedin-in"></i>
+                            <li id="icon__linkedin" class="contact-icons contact-icons__color1 opacity"><i class="fab fa-linkedin-in"></i>
 
                             </li>
-                            <li class="contact-icons"><i class="fab fa-github-alt"></i>
+                            <li id="icon__github" class="contact-icons contact-icons__color1 opacity"><i class="fab fa-github-alt"></i>
 
                             </li>
                         </ul>
                     </div>
                     <div class="list__card-skills">
                         <ul class="card__skills">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>GULP</li>
+                            <li class="card__skills-item card__skills-item__color1 opacity">html</li>
+                            <li class="card__skills-item card__skills-item__color1 opacity">css</li>
+                            <li class="card__skills-item card__skills-item__color1 opacity">gulp</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <form action="/signup" method="post" class="container__form">
+            <form action="" method="get" class="container__form">
                 <ul class="list__bar-menu">
-                    <fieldset class="form__design">
+                    <fieldset class="form__design form__fieldset">
                         <li class="bar__menu-card">
                             <div class="wrapper__bar-menu">
-                                <div class="ico__bar"></div>
-                                <div class="tex__ico-bar">DISEÑA</div>
+                                <div class="ico__bar"></div> <i class="card-main__icon far fa-keyboard"></i>
+
+                                <div class="tex__ico-bar">Diseña</div>
+                                <div class="ico__arrow-menu"><i class="fas fa-chevron-down"></i>
+
+                                </div>
                             </div>
-                            <div class="ico__arrow-menu">;)</div>
                         </li>
-                        <div class="container__radios">
+                        <div class="container__radios hidden">
                             <div class="radio__color">
                                  <h4 class="radio__titles">Colores</h4>
 
-                                <label for="radio__color-1">
-                                    <input id="palet__color-1" type="radio" value="color" name="optionscolor">
-                                    <div class="color-1"></div>
-                                    <div class="color-2"></div>
-                                    <div class="color-3"></div>
-                                </label>
-                                <label for="radio__color-2">
-                                    <input id="palet__color-2" type="radio" value="color" name=optionscolor>
-                                    <div class="color-4"></div>
-                                    <div class="color-5"></div>
-                                    <div class="color-6"></div>
-                                </label>
-                                <label for="radio__color-3">
-                                    <input id="palet__color-3" type="radio" value="color" name=optionscolor>
-                                    <div class="color-7"></div>
-                                    <div class="color-8"></div>
-                                    <div class="color-9"></div>
-                                </label>
-                            </div>
-                            <div class="radio__typo">
-                                 <h4 class="radio__titles">Fonts</h4>
-
-                                <div class="option__font-1">
-                                    <label for="radio__typo-1">
-                                        <input id="option__font-1" type="radio" value="typography" name=optionsfont>
-                                        <div class="typo-1">Ubuntu</div>
+                                <div class="container__radio-input">
+                                    <label for="palet__color-1" class="input__label">
+                                        <input id="palet__color-1" type="radio" value="1" name="optionscolor"
+                                        class="radio__button--color" checked>
+                                        <div class="palet__color-squares">
+                                            <div class="color color-1"></div>
+                                            <div class="color color-2"></div>
+                                            <div class="color color-3"></div>
+                                        </div>
                                     </label>
                                 </div>
-                                <label for="radio__typo-2">
-                                    <input id="option__font-2" type="radio" value="typography" name=optionsfont>
-                                    <div class="typo-2">Comic Sans</div>
-                                </label>
-                                <label for="radio__typo-3">
-                                    <input id="option__font-3" type="radio" value="typography" name=optionsfont>
-                                    <div class="typo-3">Montserrat</div>
-                                </label>
+                                <div class="container__radio-input">
+                                    <label for="palet__color-2" class="input__label">
+                                        <input id="palet__color-2" type="radio" value="2" name="optionscolor"
+                                        class="radio__button--color">
+                                        <div class="palet__color-squares">
+                                            <div class="color color-4"></div>
+                                            <div class="color color-5"></div>
+                                            <div class="color color-6"></div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="container__radio-input">
+                                    <label for="palet__color-3" class="input__label">
+                                        <input id="palet__color-3" type="radio" value="3" name="optionscolor"
+                                        class="radio__button--color">
+                                        <div class="palet__color-squares">
+                                            <div class="color color-7"></div>
+                                            <div class="color color-8"></div>
+                                            <div class="color color-9"></div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="radio__typo">
+                                     <h4 class="radio__titles">Fuentes</h4>
+
+                                    <div class="container__radio-input">
+                                        <label for="option__font-1" class="input__label">
+                                            <input id="option__font-1" type="radio" class="typo__radio" value="1"
+                                            name=optionsfont checked>
+                                            <div class="typo-1">Ubuntu</div>
+                                        </label>
+                                    </div>
+                                    <div class="container__radio-input">
+                                        <label for="radio__typo-2" class="input__label">
+                                            <input id="option__font-2" type="radio" class="typo__radio" value="2"
+                                            name=optionsfont>
+                                            <div class="typo-2">Comic Sans</div>
+                                        </label>
+                                    </div>
+                                    <div class="container__radio-input">
+                                        <label for="radio__typo-3" class="input__label">
+                                            <input id="option__font-3" type="radio" class="typo__radio" value="3"
+                                            name=optionsfont>
+                                            <div class="typo-3">Montserrat</div>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
                     </fieldset>
                     <fieldset class="form__personal-data form__fieldset">
                         <li class="bar__menu-card">
                             <div class="wrapper__bar-menu">
-                                <div class="ico__bar"></div> <i class="card-main__icon far fa-keyboard"></i>
+                                <div class="ico__bar"></div> <i class="card-main__icon far fa-object-ungroup"></i>
 
                                 <div class="tex__ico-bar">Rellena</div>
                                 <div class="ico__arrow-menu"><i class="fas fa-chevron-down"></i>
@@ -127,66 +151,59 @@
                                 </div>
                             </div>
                         </li>
-                        <div class="fill__title--form fill__full-name">
-                            <label class="fill__label" for="fullName">Nombre completo
-                                <input class="block" id="fullName" type="text" value=""
-                                name="fullName" placeholder="Ej: Paquita Salas">
-                            </label>
-                        </div>
-                        <div class="fill__title--form">
-                            <label class="fill__label" for="job">Puesto
-                                <input class="block" id="job" type="text" value="" name="job" placeholder="Ej: Representante Unicorn">
-                            </label>
-                        </div>
-                        <div class="event__example"></div>
-                        <div class="fill__title--form btn__add-img">
-                            <label class="fill__label" for="btn__add-img">Imagen de Perfil
-                                <div class="fill__add-img">
-                                    <input class="block" id="btn__add-img" type="button" value="Añadir imagen"
-                                    name="btn__add-img">
-                            </label>
-                            <div class="square__img"></div>
-                            </div>
-                        </div>
-                        <div class="form__contact-data">
-                            <div class="fill__title--form">
-                                <label class="fill__label" for="email">Email
-                                    <input class="block" id="email" type="email" value="" name="email"
-                                    placeholder="Ej: psmanagement@gmail.com">
+                        <div class="container__fill hidden">
+                            <div class="fill__title--form fill__full-name">
+                                <label class="fill__label" for="fullName">Nombre completo
+                                    <input class="block" id="fullName" type="text" value=""
+                                    name="fullName" placeholder="Ej: Paquita Salas">
                                 </label>
                             </div>
                             <div class="fill__title--form">
-                                <label class="fill__label" for="phone__number">Teléfono
-                                    <input class="block" id="phone__number" type="tel" value="" name="phone__number"
-                                    placeholder="Ej: 666555666">
+                                <label class="fill__label" for="job">Puesto
+                                    <input class="block" id="job" type="text" value="" name="job" placeholder="Ej: Front end Developer">
                                 </label>
                             </div>
-                            <div class="fill__title--form">
-                                <label class="fill__label" for="linkedin__net">Linkedin
-                                    <input class="block" id="linkedin__net" type="url" value="" name="linkedin__net"
-                                    placeholder="Ej: linkedin.com/paquita">
+                            <div class="event__example"></div>
+                            <div class="fill__title--form btn__add-img">
+                                <label class="fill__label" for="btn__add-img">Imagen de Perfil
+                                    <div class="fill__add-img">
+                                        <input class="block" id="btn__add-img" type="file" value="Añadir imagen"
+                                        name="btn__add-img">
+                                        <button class="btn__img--false" type="button">Añadir imagen</button>
+                                        <div class="square__img">
+                                            <img src="" class="square__img--content">
+                                        </div>
+                                    </div>
                                 </label>
                             </div>
-                            <div class="fill__title--form">
-                                <label class="fill__label" for="gitHub__net">GitHub
-                                    <input class="block" id="gitHub__net" type="text" value="" name="gitHub__net"
-                                    placeholder="Ej: @paquita-salas">
-                                </label>
-                            </div>
-                            <div class="form__skills-datacheckbox">
-                                 <h4 class="fill__label title__skills">Habilidades (máximo 3)</h4>
+                            <div class="form__contact-data">
+                                <div class="fill__title--form">
+                                    <label class="fill__label" for="email">Email
+                                        <input class="block info__details" id="email" type="email" value=""
+                                        name="email" placeholder="Ej: psmanagement@gmail.com">
+                                    </label>
+                                </div>
+                                <div class="fill__title--form">
+                                    <label class="fill__label" for="phone__number">Teléfono
+                                        <input class="block info__details" id="phone__number" type="tel"
+                                        value="" name="phone__number" placeholder="Ej: 666555666">
+                                    </label>
+                                </div>
+                                <div class="fill__title--form">
+                                    <label class="fill__label" for="linkedin__net">Linkedin
+                                        <input class="block info__details" id="linkedin__net" type="url"
+                                        value="" name="linkedin__net" placeholder="Ej: linkedin.com/paquita">
+                                    </label>
+                                </div>
+                                <div class="fill__title--form">
+                                    <label class="fill__label" for="gitHub__net">GitHub
+                                        <input class="block info__details" id="gitHub__net" type="text"
+                                        value="" name="gitHub__net" placeholder="Ej: @paquita-salas">
+                                    </label>
+                                </div>
+                                <div class="form__skills-datacheckbox">
+                                     <h4 class="fill__label title__skills">Habilidades (máximo 3)</h4>
 
-                                <div class="form__skills-html">
-                                    <label for="skills-data">
-                                        <input id="skills-data" type="checkbox" value="">HTML</label>
-                                </div>
-                                <div class="form__skills-css">
-                                    <label for="skills-data">
-                                        <input id="skills-data" type="checkbox" value="">CSS</label>
-                                </div>
-                                <div class="form__skills-gulp">
-                                    <label for="skills-data">
-                                        <input id="skills-data" type="checkbox" value="">GULP</label>
                                 </div>
                             </div>
                     </fieldset>
@@ -201,16 +218,24 @@
                                 </div>
                             </div>
                         </li>
-                        <div class="share_btn--container">
-                            <button class="btn__create-card"><i class="far fa-id-card share__icon"></i>Crea tarjeta</button>
+                        <div class="share_btn--container hidden">
+                            <button class="btn__create-card" type="button"><i class="far fa-id-card share__icon"></i>Crea tarjeta</button>
+                            <div class="twitter__hidden share__twitter">
+                                <div class="share__title">La tarjeta ha sido creada:</div> <a class="twitter-share-button" href=""
+                                target="_blank"><i class="fab fa-twitter"></i><span class="twitter__text">
+          Compartir en Twitter</span></a>
+
+                            </div>
                         </div>
                     </fieldset>
                 </ul>
             </form>
         </main>
         <footer class="footer">
-            <div class="footer__copyright">Awesome profile-cards @2018</div>
-            <div class="footer__logo"></div>
+            <div class="footer__copyright">Awesome profile-cards @2018</div> <a href="https://adalab.es/">
+    <div class="footer__logo"></div>
+  </a>
+
         </footer>
         <script type="text/javascript" src="assets/js/main.min.js"></script>
     </body>
