@@ -10,14 +10,16 @@ function fillName(event) {
   dataJason.name = nameField.value;
   myLocalStorage('name', nameField.value);
   let savedName = localStorage.getItem('name');
-  if (savedName.includes(JSON.stringify(nameField.value))) {
-    cardName.innerHTML = savedName;
-  }
-  else if (nameField.value !== '') {
-    cardName.innerHTML = nameField.value;
-  } else {
-    cardName.innerHTML = 'Nombre y Apellido';
-  }
+  console.log(savedName);
+  fillNameOnload();
+  // if (savedName.includes(JSON.stringify(nameField.value))) {
+  //   cardName.innerHTML = savedName;
+  // }
+  // else if (nameField.value !== '') {
+  //   cardName.innerHTML = nameField.value;
+  // } else {
+  //   cardName.innerHTML = 'Nombre y Apellido';
+  // }
 
 }
 
@@ -36,3 +38,12 @@ function fillJob(event) {
 }
 
 job.addEventListener('keyup', fillJob);
+
+function fillNameOnload() {
+  let savedName = localStorage.getItem('name');
+  if (savedName !== ''){
+    cardName.innerHTML = savedName;
+  }
+}
+
+fillNameOnload();

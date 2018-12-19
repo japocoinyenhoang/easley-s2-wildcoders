@@ -1,5 +1,4 @@
 'use strict';
-
 /* // Si contiene la clase hidden
 if (activableSection.classList.contains('hidden')) {
   // Elimina la clase
