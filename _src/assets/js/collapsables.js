@@ -1,13 +1,6 @@
 'use strict';
 
-/* // Si contiene la clase hidden
-if (activableSection.classList.contains('hidden')) {
-  // Elimina la clase
-  activableSection.classList.remove('hidden');
-} else { // Sino
-  // Añade la clase hidden
-  activableSection.classList.add('hidden');
-}
+
 //Desplegables */
 
 const open = document.querySelectorAll('.bar__menu-card');
