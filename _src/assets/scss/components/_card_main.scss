@@ -1,42 +1,70 @@
 fieldset {
-    border: 0;
-    padding: 0;
+  border: 0;
+  padding: 0;
 }
 
-.form__fieldset{
-    border-bottom: 1px solid #d8d8d8;
-    padding-bottom: 30px;
+.form__fieldset {
+  border-bottom: 1px solid #d8d8d8;
+  padding-bottom: 30px;
 }
 
-.wrapper__bar-menu{
-    display: flex;
-    align-items: center;
-    padding: 10px 0 7px;
-    position: relative;
- }
-
-.card-main__icon{
-    color: $color-primary;
-    font-size: 18px;
+.wrapper__bar-menu {
+  display: flex;
+  align-items: center;
+  padding: 10px 0 7px;
+  position: relative;
 }
 
-.tex__ico-bar{
-    color: #54585a;
-    font-family: $font-text;
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-    padding-left: 10px;
+.card-main__icon {
+  color: $color-primary;
+  font-size: 18px;
 }
 
-.ico__arrow-menu{
-    color: #54585a;
-    font-size: 18px;
-    position: absolute;
-    right: 0;
+.tex__ico-bar {
+  color: #54585a;
+  font-family: $font-text;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-left: 10px;
+}
+
+.ico__arrow-menu {
+  color: #54585a;
+  font-size: 18px;
+  position: absolute;
+  right: 0;
+}
+
+@keyframes reverse-up {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(180deg);
+  }
+}
+@keyframes reverse-down {
+  from {
+    transform: rotate(180deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
 }
 
 //añadir clase al icono de la flecha cuando se clickea en ella
-.ico__arrow--reverse{
-    transform: rotate(180deg);
+.ico__arrow--reverse-up{
+  animation-name: reverse-up;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.ico__arrow--reverse-down{
+  animation-name: reverse-down;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
