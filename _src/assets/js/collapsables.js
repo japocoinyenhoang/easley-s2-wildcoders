@@ -1,8 +1,4 @@
 'use strict';
-
-
-//Desplegables */
-
 const open = document.querySelectorAll('.bar__menu-card');
 const contDesign = document.querySelector('.container__radios');
 const contFill = document.querySelector('.container__fill');

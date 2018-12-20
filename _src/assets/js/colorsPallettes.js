@@ -1,39 +1,20 @@
 'use strict';
-//Paleta de colores
 const colors = document.querySelectorAll('.radio__button--color');
-
-//Objeto HTML que cambia de color
 const cardData = document.querySelector('.card__data');
-
-//Listas de objetos HTML que cambian de color
 const contactIcons = document.querySelectorAll('.contact-icons');
 
 function applyPalette(e) {
   const p = parseInt(e.currentTarget.value);
   const skillsTags = document.querySelectorAll('.card__skills-item');
-
-  console.log('>', p);
   dataJason.palette = p;
 
   if (p === 1) {
-    /* En el caso del cardData, lo estamos manejando como un objeto HTML.
-    Igual que en el ejemplo CodePen de Carlos */
-
-    //Objeto cardData
     cardData.classList.add('card-data__color1');
     cardData.classList.remove('card-data__color2', 'card-data__color3');
-
-    /* Pero en el caso de los iconos y los skills, estos tienen que ser manejados como
-    listas de objetos HTML. Por eso usamos "querySelectorAll" en lugar de "querySelector" y
-    hacemos un "for" para aplicar los cambios a todos sus elementos */
-
-    //Lista de Iconos
     for (const icon of contactIcons) {
       icon.classList.add('contact-icons__color1');
       icon.classList.remove('contact-icons__color2', 'contact-icons__color3');
     }
-
-    //Lista de Tags
     for (const tag of skillsTags) {
       tag.classList.add('card__skills-item__color1');
       tag.classList.remove('card__skills-item__color2', 'card__skills-item__color3');
@@ -62,7 +43,7 @@ function applyPalette(e) {
     }
   }
 }
-// En este caso, no se porque... no me funciona con 'click' y si con 'change'
+
 for (const c of colors) {
   c.addEventListener('change', applyPalette);
 }
