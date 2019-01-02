@@ -1,3 +1,4 @@
+Proyecto de Sprint3 - REFACTORING
 Proyecto de Sprint2 - AWESOME PROFILE -CARD
 
 Realizado por: WildCoders (Promoción Easley)
