@@ -25,22 +25,22 @@ function askForSkills() {
 
       function checkBoxLimit() {
         let count = 0;
-        for (let i = 0; i < checkList.length; i++) {
-          if (checkList[i].checked) {
+        for (const checkListElement of checkList) {
+          if (checkListElement.checked) {
             count += 1;
           }
         }
         if (count >= 3) {
-          for (let i = 0; i < checkList.length; i++) {
-            if (!checkList[i].checked) {
-              checkList[i].disabled = true;
+          for (const checkListElement of checkList) {
+            if (!checkListElement.checked) {
+              checkListElement.disabled = true;
             }
           }
 
         } else {
-          for (let i = 0; i < checkList.length; i++) {
-            if (!checkList[i].checked) {
-              checkList[i].disabled = false;
+          for (const checkListElement of checkList) {
+            if (!checkListElement.checked) {
+              checkListElement.disabled = false;
 
             }
           }
@@ -86,3 +86,6 @@ function askForSkills() {
 }
 
 askForSkills();
+
+
+
