@@ -1,4 +1,5 @@
 'use strict';
+
 let apiSkills;
 
 const skillsForm = document.querySelector('.form__skills-datacheckbox');
