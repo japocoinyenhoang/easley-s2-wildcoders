@@ -1,6 +1,4 @@
 'use strict';
-// Añadir imagen
-
 const fr = new FileReader();
 const uploadBtn = document.querySelector('.btn__add-img');
 const fileField = document.querySelector('#btn__add-img');

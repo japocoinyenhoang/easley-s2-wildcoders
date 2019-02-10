@@ -1,10 +1,4 @@
 'use strict';
-// DATOS: MAIL, TELEFONO, LINKEDIN, GITHUB
-
-// ya definido arriba const contactIcons = document.querySelectorAll('.contact-icons');
-
-// quiero que todos los campos si tienen la clase hidden. que la eliminen
-// hasta que uno de los campos tenga un valor no igual a vacio.
 const iconContainer=document.querySelector('.card__contact');
 const allData = document.querySelectorAll('.info__details');
 const email = document.getElementById('email');
@@ -21,8 +15,6 @@ function fillEmail(e) {
   } else {
     contactIcons[1].classList.add('hidden');
     contactIcons[1].classList.add('opacity');
-
-    console.log('este campo esta vacio');
   }
 }
 email.addEventListener('input', fillEmail);
@@ -41,11 +33,9 @@ function fillPhone(e) {
   } else {
     contactIcons[0].classList.add('hidden');
     contactIcons[0].classList.add('opacity');
-    console.log('este campo esta vacio');
   }
 }
 phoneNumber.addEventListener('input', fillPhone);
-
 
 const linkedin = document.getElementById('linkedin__net');
 
@@ -60,12 +50,9 @@ function fillLinkedin(e) {
   } else {
     contactIcons[2].classList.add('hidden');
     contactIcons[2].classList.add('opacity');
-
-    console.log('este campo esta vacio');
   }
 }
 linkedin.addEventListener('input', fillLinkedin);
-
 
 const github = document.getElementById('gitHub__net');
 
@@ -80,10 +67,9 @@ function fillGithub(e) {
   } else {
     contactIcons[3].classList.add('hidden');
     contactIcons[3].classList.add('opacity');
-
-    console.log('este campo esta vacio');
   }
 }
+
 github.addEventListener('input', fillGithub);
 
 

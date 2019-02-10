@@ -1,5 +1,4 @@
 'use strict';
-//Sustituir nombre y profesión
 const job = document.querySelector('#job');
 const name = document.querySelector('#fullName');
 const cardJob = document.querySelector('.card__data-job');
@@ -7,13 +6,11 @@ const cardName = document.querySelector('.card__data-name');
 
 function fillName(event) {
   const nameField = event.currentTarget;
-
   if (nameField.value !== '') {
     cardName.innerHTML = nameField.value;
   } else {
     cardName.innerHTML = 'Nombre y Apellido';
   }
-
   dataJason.name = nameField.value;
 }
 
